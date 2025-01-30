@@ -1,23 +1,17 @@
 ---
-title: Welcome
+title: Main
 tags:
 - tag1
 - tag2
 ---
 
-## Baron Guido
+## Microcontroller & ESP32 Subsystem
 
-This is a changed version of the initial repository.
-- Removed random text
-- Added my own
+- Team 309
+- Baron Guido
+- Spring 2025
+- ASU, EGR 314, Prof. Nichols
 
-table | creation
-------|---------
-test  | test
-test  | test
+## Block Diagram
 
-### New Subheading
-
-1. item 1
-1. item 2
-1. item 3
+[Block Diagram Page]()
