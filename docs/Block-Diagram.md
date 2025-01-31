@@ -4,4 +4,4 @@ title: Block Diagram
 
 ## First Version
 
-![Image](https://github.com/user-attachments/assets/dc25ab34-8c06-4985-8941-abc2d5ebec30)
+![Image](https://github.com/user-attachments/assets/ef5fee84-5b44-413a-8629-d04eb8600e6e)
