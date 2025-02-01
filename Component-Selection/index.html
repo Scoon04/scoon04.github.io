@@ -12,13 +12,13 @@
       
       
       
-        <link rel="canonical" href="https://embedded-systems-design.github.io/template_report/Block-Diagram/">
+        <link rel="canonical" href="https://embedded-systems-design.github.io/template_report/Component-Selection/">
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../Block-Diagram/">
       
       
-        <link rel="next" href="../Component-Selection/">
+        <link rel="next" href="../charts/">
       
       
       <link rel="icon" href="../static/logo.png">
@@ -29,7 +29,7 @@
 
     
       
-        <title>Block Diagram - EGR 314 Baron Guido</title>
+        <title>Component Selection - EGR 314 Baron Guido</title>
       
     
     
@@ -93,7 +93,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#first-version" class="md-skip">
+        <a href="#microcontroller" class="md-skip">
           Skip to content
         </a>
       
@@ -128,7 +128,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Block Diagram
+              Component Selection
             
           </span>
         </div>
@@ -217,11 +217,9 @@
         
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../Block-Diagram/" class="md-tabs__link">
         
   
     
@@ -236,9 +234,11 @@
         
   
   
+    
   
-    <li class="md-tabs__item">
-      <a href="../Component-Selection/" class="md-tabs__link">
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
         
   
     
@@ -340,6 +340,25 @@
       
   
   
+  
+    <li class="md-nav__item">
+      <a href="../Block-Diagram/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Block Diagram
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -353,7 +372,7 @@
           
   
   <span class="md-ellipsis">
-    Block Diagram
+    Component Selection
   </span>
   
 
@@ -364,7 +383,7 @@
         
   
   <span class="md-ellipsis">
-    Block Diagram
+    Component Selection
   </span>
   
 
@@ -384,8 +403,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#first-version" class="md-nav__link">
-    First Version
+  <a href="#microcontroller" class="md-nav__link">
+    Microcontroller
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#esp32" class="md-nav__link">
+    ESP32
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#switching-33v-regulator" class="md-nav__link">
+    Switching 3.3V Regulator
   </a>
   
 </li>
@@ -394,25 +427,6 @@
   
 </nav>
       
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Component-Selection/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Component Selection
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -461,8 +475,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#first-version" class="md-nav__link">
-    First Version
+  <a href="#microcontroller" class="md-nav__link">
+    Microcontroller
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#esp32" class="md-nav__link">
+    ESP32
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#switching-33v-regulator" class="md-nav__link">
+    Switching 3.3V Regulator
   </a>
   
 </li>
@@ -482,7 +510,7 @@
                   
 
   
-    <a href="https://github.com/embedded-systems-design/template_report/edit/main/docs/Block-Diagram.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/embedded-systems-design/template_report/edit/main/docs/Component-Selection.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -490,10 +518,89 @@
   
 
 
-  <h1>Block Diagram</h1>
+  <h1>Component Selection</h1>
 
-<h2 id="first-version">First Version</h2>
-<p><a class="glightbox" href="https://github.com/user-attachments/assets/ef5fee84-5b44-413a-8629-d04eb8600e6e" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Image" src="https://github.com/user-attachments/assets/ef5fee84-5b44-413a-8629-d04eb8600e6e" /></a></p>
+<h2 id="microcontroller">Microcontroller</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Component</strong></th>
+<th><strong>Pros</strong></th>
+<th><strong>Cons</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PIC18F47Q10-I/MP QFN<br><a class="glightbox" href="https://github.com/user-attachments/assets/4d6ef272-cb16-48e7-baa7-fd9f01511f8c" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Image" src="https://github.com/user-attachments/assets/4d6ef272-cb16-48e7-baa7-fd9f01511f8c" /></a><br>$1.25<br><a href="https://www.microchip.com/en-us/product/PIC18F47Q10#product-purchase">Product Page</a></td>
+<td>- More Pins<br>- 128KB Flash Size</td>
+<td>- Slightly Larger Size<br>- Don't need all the pins<br>- Most Expensive</td>
+</tr>
+<tr>
+<td>PIC18F27Q10-E/STX VQFN<br><a class="glightbox" href="https://github.com/user-attachments/assets/7a774841-0833-4dea-96c8-2bcb2ab06e65" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Image" src="https://github.com/user-attachments/assets/7a774841-0833-4dea-96c8-2bcb2ab06e65" /></a><br>$1.08<br><a href="https://www.microchip.com/en-us/product/PIC18F27Q10">Product Page</a></td>
+<td>- Larger Operating Temperature Range<br>- Smaller Size<br>- 128KB Flash Size<br>- E/STX are better designed for embeded systems<br>- Less Expensive</td>
+<td>- Less Pins</td>
+</tr>
+<tr>
+<td>PIC18F26Q10-E/STX VQFN<br><a class="glightbox" href="https://github.com/user-attachments/assets/6ce242af-c02b-4c2b-9962-acd5107c7d26" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Image" src="https://github.com/user-attachments/assets/6ce242af-c02b-4c2b-9962-acd5107c7d26" /></a><br>$0.96<br><a href="https://www.microchip.com/en-us/product/PIC18F26Q10">Product Page</a></td>
+<td>- Smaller Size<br>- Larger Operating Temperature<br>- E/STX are better designed for embeded systems<br>- Less Expensive</td>
+<td>- Only 64KB Flash Size<br>- Less Pins</td>
+</tr>
+</tbody>
+</table>
+<h2 id="esp32">ESP32</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Component</strong></th>
+<th><strong>Pros</strong></th>
+<th><strong>Cons</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ESP32-C3<br><a class="glightbox" href="https://github.com/user-attachments/assets/8d6c4125-fae5-4819-b6b3-0283b21b2964" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Image" src="https://github.com/user-attachments/assets/8d6c4125-fae5-4819-b6b3-0283b21b2964" /></a><br>$1.00<br><a href="https://www.digikey.com/en/products/detail/espressif-systems/ESP32-C3/14115593?&amp;utm_adgroup=&amp;utm_term=&amp;utm_content=&amp;gad_source=1">Product Page</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ESP32-WROOM<br><a class="glightbox" href="https://github.com/user-attachments/assets/c1877004-1b2b-4a44-b05f-48c2bbfa9678" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Image" src="https://github.com/user-attachments/assets/c1877004-1b2b-4a44-b05f-48c2bbfa9678" /></a><br>$2.88<br><a href="https://www.digikey.com/en/products/detail/espressif-systems/ESP32-WROOM-32E-N8R2/16733126?gQT=2">Product Page</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ESP32-S3<br><a class="glightbox" href="https://github.com/user-attachments/assets/0f992329-f761-43f9-8f02-2ab5bf204e94" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Image" src="https://github.com/user-attachments/assets/0f992329-f761-43f9-8f02-2ab5bf204e94" /></a><br>$1.50<br><a href="https://www.digikey.com/en/products/detail/espressif-systems/ESP32-D0WD-V3/11657616?&amp;utm_adgroup=&amp;utm_term=&amp;utm_content=&amp;gad_source=1">Product Page</a></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="switching-33v-regulator">Switching 3.3V Regulator</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Component</strong></th>
+<th><strong>Pros</strong></th>
+<th><strong>Cons</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><br><br><br><a href="">Product Page</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><br><br><br><a href="">Product Page</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><br><br><br><a href="">Product Page</a></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -521,7 +628,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Main" rel="prev">
+          <a href="../Block-Diagram/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Block Diagram" rel="prev">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -531,20 +638,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Main
+                Block Diagram
               </div>
             </div>
           </a>
         
         
           
-          <a href="../Component-Selection/" class="md-footer__link md-footer__link--next" aria-label="Next: Component Selection" rel="next">
+          <a href="../charts/" class="md-footer__link md-footer__link--next" aria-label="Next: Charts" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Component Selection
+                Charts
               </div>
             </div>
             <div class="md-footer__button md-icon">
