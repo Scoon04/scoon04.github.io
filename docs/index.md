@@ -15,3 +15,8 @@ tags:
 ## Block Diagram
 
 [Block Diagram Page](Block-Diagram.md)
+
+## Component Selection
+
+[Component Selection Page](Component-Selection.md)
+
