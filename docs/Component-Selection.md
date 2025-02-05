@@ -11,7 +11,7 @@ title: Component Selection
 
 Selected Part
 
-
+PIC18F27Q10-E/STX VQFN
 
 ## ESP32
 | **Component** | **Pros** | **Cons** |
@@ -22,14 +22,22 @@ Selected Part
 
 Selected Part
 
-ESP32-WROOM-32E was recommended by the instructor due to its built in antenna and ease of use compared to the other options. It is larger that we would like but it does the job so we can work around its size.
+ESP32-WROOM-32E was recommended by the instructor due to its built in antenna and ease of use compared to the other options. It is larger that I would like but it does the job so I can work around its size.
 
 ## Switching 3.3V Regulator
+| **Component** | **Pros** | **Cons** |
+|---------------|----------|----------|
+| MAX763AESA+<br>![Image](https://github.com/user-attachments/assets/9ffbad12-9ff0-45da-8fb7-31ee5920eac3)<br>$10.00<br>[Product Page](https://www.digikey.com/en/products/detail/analog-devices-inc-maxim-integrated/MAX763AESA/1513233) | - Easy to solder | - Very Expensive<br>- Lowest input voltage at 11V<br>- Only 500mA current output |
+| LTC3621EMS8E-3.3#PBF<br>![Image](https://github.com/user-attachments/assets/79b94fa0-26db-4533-ac2b-3b30e231429f)<br>$8.77<br>[Product Page](https://www.digikey.com/en/products/detail/analog-devices-inc/LTC3621EMS8E-3-3-PBF/4840601) | - Wide operating temp range<br>- Up to 17V input<br>- 1A Output Current  | - Very Expensive<br>- Datasheet was confusing<br>- Requires soldering under part |
+| TPS62162DSGR<br>![Image](https://github.com/user-attachments/assets/28ce2516-d906-4d43-8702-c3ae56931a57)<br>$1.38<br>[Product Page](https://www.digikey.com/en/products/detail/texas-instruments/TPS62162DSGR/2833447) | - Better priced than the other options<br>- Useful datasheet<br>- Up to 17V input<br>- 1A Output Current | - Requires soldering under part<br>- Seems slightly more difficult to solder |
+
+Selected Part
+
+TPS62162DSGR is the best priced option and meets all of my requirements. I plan on using a 9V 1A battery so this part allows me to get the most performance out of that and allows the parts to get all the volts and current they need. It also shouldnt overheat due to 9V being well under its 17V max input.
+
+## Power Supply
 | **Component** | **Pros** | **Cons** |
 |---------------|----------|----------|
 | <br><br><br>[Product Page]() |  |  |
 | <br><br><br>[Product Page]() |  |  |
 | <br><br><br>[Product Page]() |  |  |
-
-Selected Part
-
