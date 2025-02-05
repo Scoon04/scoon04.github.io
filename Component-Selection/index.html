@@ -423,6 +423,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#power-supply" class="md-nav__link">
+    Power Supply
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -495,6 +502,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#power-supply" class="md-nav__link">
+    Power Supply
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -548,6 +562,7 @@
 </tbody>
 </table>
 <p>Selected Part</p>
+<p>PIC18F27Q10-E/STX VQFN</p>
 <h2 id="esp32">ESP32</h2>
 <table>
 <thead>
@@ -576,8 +591,37 @@
 </tbody>
 </table>
 <p>Selected Part</p>
-<p>ESP32-WROOM-32E was recommended by the instructor due to its built in antenna and ease of use compared to the other options. It is larger that we would like but it does the job so we can work around its size.</p>
+<p>ESP32-WROOM-32E was recommended by the instructor due to its built in antenna and ease of use compared to the other options. It is larger that I would like but it does the job so I can work around its size.</p>
 <h2 id="switching-33v-regulator">Switching 3.3V Regulator</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Component</strong></th>
+<th><strong>Pros</strong></th>
+<th><strong>Cons</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MAX763AESA+<br><a class="glightbox" href="https://github.com/user-attachments/assets/9ffbad12-9ff0-45da-8fb7-31ee5920eac3" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Image" src="https://github.com/user-attachments/assets/9ffbad12-9ff0-45da-8fb7-31ee5920eac3" /></a><br>$10.00<br><a href="https://www.digikey.com/en/products/detail/analog-devices-inc-maxim-integrated/MAX763AESA/1513233">Product Page</a></td>
+<td>- Easy to solder</td>
+<td>- Very Expensive<br>- Lowest input voltage at 11V<br>- Only 500mA current output</td>
+</tr>
+<tr>
+<td>LTC3621EMS8E-3.3#PBF<br><a class="glightbox" href="https://github.com/user-attachments/assets/79b94fa0-26db-4533-ac2b-3b30e231429f" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Image" src="https://github.com/user-attachments/assets/79b94fa0-26db-4533-ac2b-3b30e231429f" /></a><br>$8.77<br><a href="https://www.digikey.com/en/products/detail/analog-devices-inc/LTC3621EMS8E-3-3-PBF/4840601">Product Page</a></td>
+<td>- Wide operating temp range<br>- Up to 17V input<br>- 1A Output Current</td>
+<td>- Very Expensive<br>- Datasheet was confusing<br>- Requires soldering under part</td>
+</tr>
+<tr>
+<td>TPS62162DSGR<br><a class="glightbox" href="https://github.com/user-attachments/assets/28ce2516-d906-4d43-8702-c3ae56931a57" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Image" src="https://github.com/user-attachments/assets/28ce2516-d906-4d43-8702-c3ae56931a57" /></a><br>$1.38<br><a href="https://www.digikey.com/en/products/detail/texas-instruments/TPS62162DSGR/2833447">Product Page</a></td>
+<td>- Better priced than the other options<br>- Useful datasheet<br>- Up to 17V input<br>- 1A Output Current</td>
+<td>- Requires soldering under part<br>- Seems slightly more difficult to solder</td>
+</tr>
+</tbody>
+</table>
+<p>Selected Part</p>
+<p>TPS62162DSGR is the best priced option and meets all of my requirements. I plan on using a 9V 1A battery so this part allows me to get the most performance out of that and allows the parts to get all the volts and current they need. It also shouldnt overheat due to 9V being well under its 17V max input.</p>
+<h2 id="power-supply">Power Supply</h2>
 <table>
 <thead>
 <tr>
@@ -604,7 +648,6 @@
 </tr>
 </tbody>
 </table>
-<p>Selected Part</p>
 
 
 
