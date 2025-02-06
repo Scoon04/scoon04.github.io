@@ -62,3 +62,16 @@ My ESP32 module will only need the UART pins to give and recieve data from the P
 
 ## Power Budget
 
+| **All Major Components** | **Component Name** | **Part Number** | **Supply Voltage Range** | **#** | **Max Current (mA)** |
+|---|---|---|---|---|---|
+|  | Microcontroller | PIC18F27Q10 | 1.8 - 5.5 | 1 | 250 |
+|  | ESP32 Controller | ESP32-S3-WROOM-1-N4 | 3.3 - 3.6 | 1 | 355 |
+| **9V Power Rail** | **Component Name** | **Part Number** | **Supply Voltage Range** | **#** | **Max Current (mA)** |
+|  | N/A | N/A | N/A | N/A | N/A |
+| **3.3V Power Rail** | **Component Name** | **Part Number** | **Supply Voltage Range** | **#** | **Max Current (mA)** |
+|  | Microcontroller | PIC18F27Q10 | 1.8 - 5.5 | 1 | 250 |
+|  | ESP32 Controller | ESP32-S3-WROOM-1-N4 | 3.3 - 3.6 | 1 | 355 |
+| **External Power Source** | **Component Name** | **Part Number** | **Supply Voltage Range** | **#** | **Current Supplied (mAh)** |
+|  | Battery | B0B248DSFG | 9V | 1 | 1300 |
+| **Battery Life** | **Parts Required Current** | **Battery Current (mAh)** | **Lowest Runtime (hh:mm)** |  |  |
+|  | 605 | 1300 | 02:09 |  |  |
