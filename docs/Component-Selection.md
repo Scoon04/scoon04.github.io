@@ -33,11 +33,11 @@ ESP32-WROOM-32E was recommended by the instructor due to its built in antenna an
 |---------------|----------|----------|
 | MAX763AESA+<br>![Image](https://github.com/user-attachments/assets/9ffbad12-9ff0-45da-8fb7-31ee5920eac3)<br>$10.00<br>[Product Page](https://www.digikey.com/en/products/detail/analog-devices-inc-maxim-integrated/MAX763AESA/1513233) | - Easy to solder | - Very Expensive<br>- Lowest input voltage at 11V<br>- Only 500mA current output |
 | LTC3621EMS8E-3.3#PBF<br>![Image](https://github.com/user-attachments/assets/79b94fa0-26db-4533-ac2b-3b30e231429f)<br>$8.77<br>[Product Page](https://www.digikey.com/en/products/detail/analog-devices-inc/LTC3621EMS8E-3-3-PBF/4840601) | - Wide operating temp range<br>- Up to 17V input<br>- 1A Output Current  | - Very Expensive<br>- Datasheet was confusing<br>- Requires soldering under part |
-| TPS62162DSGR<br>![Image](https://github.com/user-attachments/assets/28ce2516-d906-4d43-8702-c3ae56931a57)<br>$1.38<br>[Product Page](https://www.digikey.com/en/products/detail/texas-instruments/TPS62162DSGR/2833447) | - Better priced than the other options<br>- Useful datasheet<br>- Up to 17V input<br>- 1A Output Current | - Requires soldering under part<br>- Seems slightly more difficult to solder |
+| LMR50410Y3FQDBVRQ1<br>![Image](https://github.com/user-attachments/assets/27154629-ffba-48d2-8ea3-39eddf6070cc)<br>$1.47<br>[Product Page](https://www.digikey.com/en/products/detail/texas-instruments/LMR50410Y3FQDBVRQ1/13562985) | - Better priced than the other options<br>- Useful datasheet<br>- Up to 36V input<br>- 1A Output Current<br>- Higher Operating Temp Range | - Nothing stands out a being a con. This just seems like a better product overall for my use case |
 
 Selected Part
 
-TPS62162DSGR is the best priced option and meets all of my requirements. I plan on using a 9V 1A battery so this part allows me to get the most performance out of that and allows the parts to get all the volts and current they need. It also shouldnt overheat due to 9V being well under its 17V max input.
+LMR50410Y3FQDBVRQ1 is the best priced option and meets all of my requirements. I plan on using a 9V 1A battery so this part allows me to get the most performance out of that and allows the parts to get all the volts and current they need. It also shouldnt overheat due to 9V being well under its 36V max input, as well as it having a higher operating temp range than the other choices.
 
 ## Power Supply
 | **Component** | **Pros** | **Cons** |
