@@ -15,7 +15,7 @@ My role on my team is to send and recieve data to and from the HMI. I will recie
 
 Selected Part
 
-PIC18F27Q10-I/SS SSOP
+PIC18F27Q10-I/SS SSOP was selected due to its optimal size for my use case, high flash size, and pins count. Its smaller in for factor so I can fit it neatly on the pcb. Also, the pins contain everything we need without all the extra pins on the larger models. See the [PIC Project Demo](#PIC-Project-Demo) for more information about this chip and what pins I used.
 
 ## ESP32
 | **Component** | **Pros** | **Cons** |
@@ -52,7 +52,19 @@ LCLEBM 9V 1300mah has a larger mah size so it will last a bit longer than the ot
 
 ## PIC Project Demo
 
+![Image](https://github.com/user-attachments/assets/347ae521-e0a8-4c0f-9ddc-49590972ea65)
 
+![Image](https://github.com/user-attachments/assets/fa33effc-904e-42d7-9f16-b8a310933e59)
+
+These show the MCC configuration and and pin selections in mplab x. I have UART for the esp32 chip communication, ADC for the gyroscope, and I2C_Host for controlling the gyroscope and actuator. I may need to use I2C_Client instead of host but I believe host is the proper selection so I can read and write to and from the devices.
+
+The pins selected were the default pins form MCC, however I did check several other pins to make sure I had multiple options and there are several other options for each component. The pin selection will be finalized later based on the pcb size and other components on it.
+
+There are no errors in the MCC notifications. They only suggested I enable global and peripheral interrupts because some components are interrupt driven, so I enabled in in the code with the following lines.
+```
+INTERRUPT_GlobalInterruptEnable(); //Enable Global Interrupts
+INTERRUPT_PeripheralInterruptEnable(); //Enable Peripheral Interrupts
+```
 
 ## ESP32 Pinout Diagram
 
