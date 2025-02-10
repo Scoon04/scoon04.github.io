@@ -70,7 +70,7 @@ INTERRUPT_PeripheralInterruptEnable(); //Enable Peripheral Interrupts
 
 ![Image](https://github.com/user-attachments/assets/c9f38d54-e26a-4491-99a1-08f9e845aa43)
 
-My ESP32 module will only need the UART pins to give and recieve data from the PIC microcontroller. The reason its not doing more is becuase the class requirements need us to use at least one PIC and ESP32 controller. The HMI will have an EPS32 module controlling it, so if I only used the ESP32 module then the project wouldn't meet class requirements. The plan is to use ESP-NOW to send data between ESP32 modules and then my module will use UART to give and recieve data from the local PIC controller.
+My ESP32 module will only need the UART pins to give and recieve data from the PIC microcontroller. The reason its not doing more is becuase the class requirements need us to use at least one PIC and ESP32 controller. The HMI will have an EPS32 module controlling it, so if I only used the ESP32 module then the project wouldn't meet class requirements. The plan is to use MQTT to send data between ESP32 modules and then my module will use UART to give and recieve data from the local PIC controller.
 
 ## Power Budget
 
