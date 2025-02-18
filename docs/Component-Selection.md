@@ -26,7 +26,7 @@ PIC18F27Q10-I/SS SSOP was selected due to its optimal size for my use case, high
 
 Selected Part
 
-ESP32-WROOM-32E was recommended by the instructor due to its built in antenna and ease of use compared to the other options. It is larger that I would like but it does the job without any major hassle so I can work around its size.
+ESP32-S3-WROOM-1-N4 was recommended by the instructor due to its built in antenna and ease of use compared to the other options. It is larger that I would like but it does the job without any major hassle so I can work around its size.
 
 ## Switching 3.3V Regulator
 | **Component** | **Pros** | **Cons** |
