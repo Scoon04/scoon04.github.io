@@ -7,5 +7,5 @@ title: Resources
 Needs 2 pushbuttons for boot and en.
 
 Generic Components (1206 Surface Mount Minimum)
-- [PushButton](https://www.digikey.com/en/products/detail/omron-electronics-inc-emc-div/B3U-1100PM/3908607?&utm_adgroup=General&utm_term=&gad_source=1)
+- [PushButton]([https://www.digikey.com/en/products/detail/omron-electronics-inc-emc-div/B3U-1100PM/3908607?&utm_adgroup=General&utm_term=&gad_source=1](https://www.digikey.com/en/products/detail/omron-electronics-inc-emc-div/B3U-1000P/1534338))
 - [10k Resistor](https://www.digikey.com/en/products/detail/yageo/RC1206FR-0710KL/728483)
