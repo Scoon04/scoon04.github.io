@@ -12,6 +12,7 @@ Generic Components (1206 Surface Mount Minimum)
 
 - [10k Resistor](https://www.digikey.com/en/products/detail/yageo/RC1206FR-0710KL/728483)
 - [0.1uF Ceramic Capacitor](https://www.digikey.com/en/products/detail/yageo/CC1206KRX7R8BB104/5884627)
+- [10uF Ceramic Capacitor](https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL31B106KAHNNNE/3887462)
 
 For ESP32-s3
 
