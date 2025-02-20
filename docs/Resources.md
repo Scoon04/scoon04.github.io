@@ -6,11 +6,23 @@ title: Resources
 
 Needs 2 pushbuttons for boot and en.
 
+Components
+
 Generic Components (1206 Surface Mount Minimum)
 
-- [PushButton](https://www.digikey.com/en/products/detail/omron-electronics-inc-emc-div/B3U-1000P/1534338)
 - [10k Resistor](https://www.digikey.com/en/products/detail/yageo/RC1206FR-0710KL/728483)
-- [Barrel Jack](https://www.digikey.com/en/products/detail/same-sky-formerly-cui-devices/PJ-037A/1644545)
+- [0.1uF Ceramic Capacitor](https://www.digikey.com/en/products/detail/yageo/CC1206KRX7R8BB104/5884627)
+
+For ESP32-s3
+
+- [PushButton](https://www.digikey.com/en/products/detail/omron-electronics-inc-emc-div/B3U-1000P/1534338)
 - [Micro-USB Port](https://www.digikey.com/en/products/detail/gct/USB3131-30-0230-A/9859642)
+
+Ribbon Cable Stuff
+
 - [Ribbon Cable Ports](https://www.digikey.com/en/products/detail/molex/0702460801/760165)
 - [Ribbon Cable](https://www.amazon.com/gp/product/B07DFBPZLJ?smid=A64W1E1ZZHST0)
+
+Other
+
+- [Barrel Jack](https://www.digikey.com/en/products/detail/same-sky-formerly-cui-devices/PJ-037A/1644545)
