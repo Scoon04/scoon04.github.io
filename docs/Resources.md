@@ -25,7 +25,7 @@ For ESP32-s3
 
 Ribbon Cable Stuff
 
-- [Ribbon Cable Ports](https://www.digikey.com/en/products/detail/molex/0702460801/760165)
+- [Ribbon Cable Ports](https://www.digikey.com/en/products/detail/w-rth-elektronik/61200821621/4846916?&utm_adgroup=&utm_term=&utm_content=&gad_source=1)
 - [Ribbon Cable](https://www.amazon.com/gp/product/B07DFBPZLJ?smid=A64W1E1ZZHST0)
 
 Other
