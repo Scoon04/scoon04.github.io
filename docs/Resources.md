@@ -14,6 +14,7 @@ Generic Components (1206 Surface Mount Minimum)
 - [51k Resistor](https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF1206JT51K0/1753857)
 - [22.1k Resistor](https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RNCP1206FTD22K1/2240381)
 - [0.1uF Ceramic Capacitor](https://www.digikey.com/en/products/detail/yageo/CC1206KRX7R8BB104/5884627)
+- [1uF Ceramic Capacitor](https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL31B105KBHNNNE/3886726)
 - [10uF Ceramic Capacitor](https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL31B106KAHNNNE/3887462)
 - [2.2uF Ceramic Capacitor](https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL31B225KBHNNNE/3886949)
 - [3.3uH Inductor](https://www.digikey.com/en/products/detail/murata-electronics/LQM31PN3R3M00L/2594619)
@@ -31,5 +32,5 @@ Ribbon Cable Stuff
 Other
 
 - [Barrel Jack](https://www.digikey.com/en/products/detail/same-sky-formerly-cui-devices/PJ-037A/1644545)
-- [LED](https://www.digikey.com/en/products/detail/w%C3%BCrth-elektronik/150120RS75000/4489939)
+- [LED](https://www.digikey.com/en/products/detail/dialight/5988260107F/1291286)
 
