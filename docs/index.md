@@ -20,3 +20,6 @@ tags:
 
 [Component Selection Page](Component-Selection.md)
 
+## Schematic
+
+[Schematic Page](Schematic.md)
