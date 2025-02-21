@@ -6,7 +6,10 @@ title: Component Selection
 
 My role on my team is to send and recieve data to and from the HMI. I will recieve data from the gyroscope and send it to the HMI wirelessly with esp32. I will also recieve wireless data from the HMI and send it to the motor driver. I will also be responsible for recieving and translating gyroscope data to send to the motor driver if we decide to do that later on. Additionally, I will be making sure the regulated power is implimented properly, however im not sure if that will be on my board or another team members board for the final design.
 
-## Microcontroller
+## PIC Microcontroller
+
+***PIC CONTROLLER IS NO LONGER USED IN THIS SYSTEM***
+
 | **Component** | **Pros** | **Cons** |
 |---------------|----------|----------|
 | PIC18F47Q10-I/PT TQFP<br>![Image](https://github.com/user-attachments/assets/6d7fc249-07ad-4904-bfbb-ba29c82f6786)<br>$1.22<br>[Product Page](https://www.microchip.com/en-us/product/PIC18F47Q10#product-purchase) | - More Pins<br>- 128KB Flash Size | - Slightly Larger Size<br>- Don't need all the pins<br>- Most Expensive |
@@ -18,6 +21,7 @@ Selected Part
 PIC18F27Q10-I/SS SSOP was selected due to its optimal size for my use case, high flash size, and pins count. Its smaller in for factor so I can fit it neatly on the pcb. Also, the pins contain everything we need without all the extra pins on the larger models. See the [PIC Project Demo](#PIC-Project-Demo) for more information about this chip and what pins I used.
 
 ## ESP32
+
 | **Component** | **Pros** | **Cons** |
 |---------------|----------|----------|
 | ESP32-C3<br>![Image](https://github.com/user-attachments/assets/8d6c4125-fae5-4819-b6b3-0283b21b2964)<br>$1.00<br>[Product Page](https://www.digikey.com/en/products/detail/espressif-systems/ESP32-C3/14115593?&utm_adgroup=&utm_term=&utm_content=&gad_source=1) | - More Affordable<br>- Small Size | - Needs external antenna to opperate normally<br>- Extra components take up more space |
@@ -29,6 +33,7 @@ Selected Part
 ESP32-S3-WROOM-1-N4 was recommended by the instructor due to its built in antenna and ease of use compared to the other options. It is larger that I would like but it does the job without any major hassle so I can work around its size.
 
 ## Switching 3.3V Regulator
+
 | **Component** | **Pros** | **Cons** |
 |---------------|----------|----------|
 | MAX763AESA+<br>![Image](https://github.com/user-attachments/assets/9ffbad12-9ff0-45da-8fb7-31ee5920eac3)<br>$10.00<br>[Product Page](https://www.digikey.com/en/products/detail/analog-devices-inc-maxim-integrated/MAX763AESA/1513233) | - Easy to solder | - Very Expensive<br>- Lowest input voltage at 11V<br>- Only 500mA current output |
@@ -40,6 +45,7 @@ Selected Part
 LMR50410Y3FQDBVRQ1 is the best priced option and meets all of my requirements. I plan on using a 9V 1A battery so this part allows me to get the most performance out of that and allows the parts to get all the volts and current they need. It also shouldnt overheat due to 9V being well under its 36V max input, as well as it having a higher operating temp range than the other choices.
 
 ## Power Supply
+
 | **Component** | **Pros** | **Cons** |
 |---------------|----------|----------|
 | HW 9V 1000mah Rechargeable Battery<br>![Image](https://github.com/user-attachments/assets/1b58af53-ec01-4d38-9ed1-03f749cc9a79)<br>$9.99<br>[Product Page](https://www.amazon.com/HW-Rechargeable-Batteries-Micro-USB-Indicator/dp/B0B9G9RQG3?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&smid=AI0WONWMNF2H6&gPromoCode=sns_us_en_5_2023Q4&gQT=1) | - Cheapest Option<br>- Rechargable | - Lowest mah size<br> |
@@ -51,6 +57,8 @@ Selected Part
 LCLEBM 9V 1300mah has a larger mah size so it will last a bit longer than the other options without having to recharging. It's also a great price for a 2 pack, and has a quick delivery time unlike one of the other options. It overall is slightly better than the other options because of its price, mah size, and delivery time.
 
 ## PIC Project Demo
+
+***PIC CONTROLLER IS NO LONGER USED IN THIS SYSTEM***
 
 ![Image](https://github.com/user-attachments/assets/347ae521-e0a8-4c0f-9ddc-49590972ea65)
 
@@ -67,6 +75,8 @@ INTERRUPT_PeripheralInterruptEnable(); //Enable Peripheral Interrupts
 ```
 
 ## ESP32 Pinout Diagram
+
+***VIEW SCHEMATIC PAGE FOR MOST UPDATED INFO ON THE PINS USED***
 
 ![Image](https://github.com/user-attachments/assets/c9f38d54-e26a-4491-99a1-08f9e845aa43)
 
