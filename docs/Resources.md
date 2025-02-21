@@ -18,6 +18,8 @@ Generic Components (1206 Surface Mount Minimum)
 - [10uF Ceramic Capacitor](https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL31B106KAHNNNE/3887462)
 - [2.2uF Ceramic Capacitor](https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL31B225KBHNNNE/3886949)
 - [3.3uH Inductor](https://www.digikey.com/en/products/detail/murata-electronics/LQM31PN3R3M00L/2594619)
+- [Fuse Holder](https://www.digikey.com/en/products/detail/keystone-electronics/4628/2137316?&utm_adgroup=&utm_term=&utm_content=&gad_source=1)
+- [Fuse](https://www.digikey.com/en/products/detail/littelfuse-inc/022501.5MXP/777788?&utm_adgroup=&utm_term=&utm_content=&gad_source=1)
 
 For ESP32-s3
 
