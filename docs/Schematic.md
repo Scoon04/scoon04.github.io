@@ -1,4 +1,4 @@
 ---
-title: Component Selection
+title: Schematic
 ---
 
