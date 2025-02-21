@@ -31,3 +31,5 @@ Ribbon Cable Stuff
 Other
 
 - [Barrel Jack](https://www.digikey.com/en/products/detail/same-sky-formerly-cui-devices/PJ-037A/1644545)
+- [LED](https://www.digikey.com/en/products/detail/w%C3%BCrth-elektronik/150120RS75000/4489939)
+
