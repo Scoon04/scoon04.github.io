@@ -8,7 +8,7 @@ My role on my team is to send and recieve data to and from the HMI. I will recie
 
 ## PIC Microcontroller
 
-***PIC CONTROLLER IS NO LONGER USED IN THIS SYSTEM***
+>***PIC CONTROLLER IS NO LONGER USED IN THIS SYSTEM***
 
 | **Component** | **Pros** | **Cons** |
 |---------------|----------|----------|
@@ -58,7 +58,7 @@ LCLEBM 9V 1300mah has a larger mah size so it will last a bit longer than the ot
 
 ## PIC Project Demo
 
-***PIC CONTROLLER IS NO LONGER USED IN THIS SYSTEM***
+>***PIC CONTROLLER IS NO LONGER USED IN THIS SYSTEM***
 
 ![Image](https://github.com/user-attachments/assets/347ae521-e0a8-4c0f-9ddc-49590972ea65)
 
@@ -76,13 +76,15 @@ INTERRUPT_PeripheralInterruptEnable(); //Enable Peripheral Interrupts
 
 ## ESP32 Pinout Diagram
 
-***VIEW SCHEMATIC PAGE FOR MOST UPDATED INFO ON THE PINS USED***
+>***VIEW SCHEMATIC PAGE FOR MOST UPDATED INFO ON THE PINS USED***
 
 ![Image](https://github.com/user-attachments/assets/c9f38d54-e26a-4491-99a1-08f9e845aa43)
 
 My ESP32 module will only need the UART pins to give and recieve data from the PIC microcontroller. The reason its not doing more is becuase the class requirements need us to use at least one PIC and ESP32 controller. The HMI will have an EPS32 module controlling it, so if I only used the ESP32 module then the project wouldn't meet class requirements. The plan is to use MQTT to send data between ESP32 modules and then my module will use UART to give and recieve data from the local PIC controller.
 
 ## Power Budget
+
+### Version 1
 
 | **All Major Components** | **Component Name** | **Part Number** | **Supply Voltage Range** | **#** | **Max Current (mA)** |
 |---|---|---|---|---|---|
@@ -97,3 +99,18 @@ My ESP32 module will only need the UART pins to give and recieve data from the P
 |  | Battery | B0B248DSFG | 9V | 1 | 1300 |
 | **Battery Life** | **Parts Required Current** | **Battery Current (mAh)** | **Lowest Runtime (hh:mm)** |  |  |
 |  | 605 | 1300 | 02:09 |  |  |
+
+### Version 2
+
+| **All Major Components** | **Component Name** | **Part Number** | **Supply Voltage Range** | **#** | **Max Current (mA)** |
+|---|---|---|---|---|---|
+|  | ESP32 Controller | ESP32-S3-WROOM-1-N4 | 3.3 - 3.6 | 1 | 355 |
+| **9V Power Rail** | **Component Name** | **Part Number** | **Supply Voltage Range** | **#** | **Max Current (mA)** |
+|  | N/A | N/A | N/A | N/A | N/A |
+| **3.3V Power Rail** | **Component Name** | **Part Number** | **Supply Voltage Range** | **#** | **Max Current (mA)** |
+|  | ESP32 Controller | ESP32-S3-WROOM-1-N4 | 3.3 - 3.6 | 1 | 355 |
+| **External Power Source** | **Component Name** | **Part Number** | **Supply Voltage Range** | **#** | **Current Supplied (mAh)** |
+|  | Battery | B0B248DSFG | 9V | 1 | 1300 |
+| **Battery Life** | **Parts Required Current** | **Battery Current (mAh)** | **Lowest Runtime (hh:mm)** |  |  |
+|  | 355 | 1300 | 03:39 |  |  |
+
