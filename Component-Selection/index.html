@@ -490,6 +490,26 @@
     Power Budget
   </a>
   
+    <nav class="md-nav" aria-label="Power Budget">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#version-1" class="md-nav__link">
+    Version 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-2" class="md-nav__link">
+    Version 2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -635,6 +655,26 @@
     Power Budget
   </a>
   
+    <nav class="md-nav" aria-label="Power Budget">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#version-1" class="md-nav__link">
+    Version 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-2" class="md-nav__link">
+    Version 2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -665,7 +705,9 @@
 <h2 id="my-team-role">My Team Role</h2>
 <p>My role on my team is to send and recieve data to and from the HMI. I will recieve data from the gyroscope and send it to the HMI wirelessly with esp32. I will also recieve wireless data from the HMI and send it to the motor driver. I will also be responsible for recieving and translating gyroscope data to send to the motor driver if we decide to do that later on. Additionally, I will be making sure the regulated power is implimented properly, however im not sure if that will be on my board or another team members board for the final design.</p>
 <h2 id="pic-microcontroller">PIC Microcontroller</h2>
+<blockquote>
 <p><strong><em>PIC CONTROLLER IS NO LONGER USED IN THIS SYSTEM</em></strong></p>
+</blockquote>
 <table>
 <thead>
 <tr>
@@ -782,7 +824,9 @@
 <p>Selected Part</p>
 <p>LCLEBM 9V 1300mah has a larger mah size so it will last a bit longer than the other options without having to recharging. It's also a great price for a 2 pack, and has a quick delivery time unlike one of the other options. It overall is slightly better than the other options because of its price, mah size, and delivery time.</p>
 <h2 id="pic-project-demo">PIC Project Demo</h2>
+<blockquote>
 <p><strong><em>PIC CONTROLLER IS NO LONGER USED IN THIS SYSTEM</em></strong></p>
+</blockquote>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/347ae521-e0a8-4c0f-9ddc-49590972ea65" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Image" src="https://github.com/user-attachments/assets/347ae521-e0a8-4c0f-9ddc-49590972ea65" /></a></p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/fa33effc-904e-42d7-9f16-b8a310933e59" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Image" src="https://github.com/user-attachments/assets/fa33effc-904e-42d7-9f16-b8a310933e59" /></a></p>
 <p>These show the MCC configuration and and pin selections in mplab x. I have UART for the esp32 chip communication, ADC for the gyroscope, and I2C_Host for controlling the gyroscope and actuator. I may need to use I2C_Client instead of host but I believe host is the proper selection so I can read and write to and from the devices.</p>
@@ -792,10 +836,13 @@
 INTERRUPT_PeripheralInterruptEnable(); //Enable Peripheral Interrupts
 </code></pre></div></p>
 <h2 id="esp32-pinout-diagram">ESP32 Pinout Diagram</h2>
+<blockquote>
 <p><strong><em>VIEW SCHEMATIC PAGE FOR MOST UPDATED INFO ON THE PINS USED</em></strong></p>
+</blockquote>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/c9f38d54-e26a-4491-99a1-08f9e845aa43" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Image" src="https://github.com/user-attachments/assets/c9f38d54-e26a-4491-99a1-08f9e845aa43" /></a></p>
 <p>My ESP32 module will only need the UART pins to give and recieve data from the PIC microcontroller. The reason its not doing more is becuase the class requirements need us to use at least one PIC and ESP32 controller. The HMI will have an EPS32 module controlling it, so if I only used the ESP32 module then the project wouldn't meet class requirements. The plan is to use MQTT to send data between ESP32 modules and then my module will use UART to give and recieve data from the local PIC controller.</p>
 <h2 id="power-budget">Power Budget</h2>
+<h3 id="version-1">Version 1</h3>
 <table>
 <thead>
 <tr>
@@ -893,6 +940,93 @@ INTERRUPT_PeripheralInterruptEnable(); //Enable Peripheral Interrupts
 <td>605</td>
 <td>1300</td>
 <td>02:09</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="version-2">Version 2</h3>
+<table>
+<thead>
+<tr>
+<th><strong>All Major Components</strong></th>
+<th><strong>Component Name</strong></th>
+<th><strong>Part Number</strong></th>
+<th><strong>Supply Voltage Range</strong></th>
+<th><strong>#</strong></th>
+<th><strong>Max Current (mA)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>ESP32 Controller</td>
+<td>ESP32-S3-WROOM-1-N4</td>
+<td>3.3 - 3.6</td>
+<td>1</td>
+<td>355</td>
+</tr>
+<tr>
+<td><strong>9V Power Rail</strong></td>
+<td><strong>Component Name</strong></td>
+<td><strong>Part Number</strong></td>
+<td><strong>Supply Voltage Range</strong></td>
+<td><strong>#</strong></td>
+<td><strong>Max Current (mA)</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><strong>3.3V Power Rail</strong></td>
+<td><strong>Component Name</strong></td>
+<td><strong>Part Number</strong></td>
+<td><strong>Supply Voltage Range</strong></td>
+<td><strong>#</strong></td>
+<td><strong>Max Current (mA)</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>ESP32 Controller</td>
+<td>ESP32-S3-WROOM-1-N4</td>
+<td>3.3 - 3.6</td>
+<td>1</td>
+<td>355</td>
+</tr>
+<tr>
+<td><strong>External Power Source</strong></td>
+<td><strong>Component Name</strong></td>
+<td><strong>Part Number</strong></td>
+<td><strong>Supply Voltage Range</strong></td>
+<td><strong>#</strong></td>
+<td><strong>Current Supplied (mAh)</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>Battery</td>
+<td>B0B248DSFG</td>
+<td>9V</td>
+<td>1</td>
+<td>1300</td>
+</tr>
+<tr>
+<td><strong>Battery Life</strong></td>
+<td><strong>Parts Required Current</strong></td>
+<td><strong>Battery Current (mAh)</strong></td>
+<td><strong>Lowest Runtime (hh:mm)</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>355</td>
+<td>1300</td>
+<td>03:39</td>
 <td></td>
 <td></td>
 </tr>
