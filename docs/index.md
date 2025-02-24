@@ -22,4 +22,4 @@ tags:
 
 ## Team Website
 
-[Team Website](https://ibmyers2.github.io/EGR314_Team309_IBM/)
+[Team Website](https://egr314-2025-s-309.github.io/)
