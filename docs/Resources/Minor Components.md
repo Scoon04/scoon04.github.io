@@ -10,6 +10,7 @@ Components
 
 Generic Components (1206 Surface Mount Minimum)
 
+- [100 Ohm Resistor](https://www.digikey.com/en/products/detail/panasonic-electronic-components/ERJ-8ENF1000V/88671)
 - [10k Resistor](https://www.digikey.com/en/products/detail/yageo/RC1206FR-0710KL/728483)
 - [51k Resistor](https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF1206JT51K0/1753857)
 - [22.1k Resistor](https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RNCP1206FTD22K1/2240381)
