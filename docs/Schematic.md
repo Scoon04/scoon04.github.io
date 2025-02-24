@@ -2,7 +2,7 @@
 title: Schematic
 ---
 
-![Image](https://github.com/user-attachments/assets/0e348065-7f16-4752-aceb-f35e13ae0b46)
+![Image](https://github.com/user-attachments/assets/6a4e0d4d-574b-4e3f-ae15-62bce5ffbe10)
 
 [Individual System Design.pdf](https://github.com/user-attachments/files/18937764/Individual.System.Design.pdf)
 
