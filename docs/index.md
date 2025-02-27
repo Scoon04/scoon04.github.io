@@ -18,7 +18,7 @@ tags:
 
 [Component Selection Page](Component-Selection.md)
 
-[Schematic Page](Schematic.md)
+[Schematic Page](Schematic-&-BOM.md)
 
 ## Team Website
 
