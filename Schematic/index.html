@@ -92,6 +92,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#schematic" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -422,6 +427,17 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Schematic
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -431,6 +447,37 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#schematic" class="md-nav__link">
+    Schematic
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bom" class="md-nav__link">
+    BOM
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -536,6 +583,28 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#schematic" class="md-nav__link">
+    Schematic
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bom" class="md-nav__link">
+    BOM
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -559,10 +628,398 @@
 
   <h1>Schematic</h1>
 
-<p><a class="glightbox" href="https://github.com/user-attachments/assets/1366fbfe-c03e-49eb-8bf4-d7c0e1e9cda1" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Image" src="https://github.com/user-attachments/assets/1366fbfe-c03e-49eb-8bf4-d7c0e1e9cda1" /></a></p>
-<p><a href="https://github.com/user-attachments/files/18951130/Individual.System.Design.pdf">Individual System Design.pdf</a></p>
-<p><a href="https://github.com/user-attachments/files/18951131/Individual.System.Design.2-24-2025.4-10-19.PM.zip">Individual System Design (2-24-2025 4-10-19 PM).zip</a></p>
+<h2 id="schematic">Schematic</h2>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/a09aff7a-e1a4-4753-94e4-5c6dad9dcbe7" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Image" src="https://github.com/user-attachments/assets/a09aff7a-e1a4-4753-94e4-5c6dad9dcbe7" /></a></p>
+<p><a href="https://github.com/user-attachments/files/18999858/Individual.System.Design.pdf">Individual System Design.pdf</a></p>
+<p><a href="https://github.com/user-attachments/files/18999859/Individual.System.Design.2-26-2025.5-53-55.PM.zip">Individual System Design (2-26-2025 5-53-55 PM).zip</a></p>
 <p>This schematic is simple electrically. The main focus of this system is to host UART communication through the other 2 systems and to communicate wirelessly with the HMI through MQTT server. This schematic doesnt show much of its functionallity becuase its functionallity is code and server based, but it does show the pins that will be used to communitate with the other PCBs and how power will be distributed to other boards. The 9V power rail comes from the barrel jack and into the pin out so it can go to other boards, and the RX and TX come in and out of the board through the in and out connectors.</p>
+<h2 id="bom">BOM</h2>
+<table>
+<thead>
+<tr>
+<th>Part Name</th>
+<th>Unit Quantity</th>
+<th>Cost per Unit (Prototype)</th>
+<th>Total Prototype Cost</th>
+<th>Cost per Unit (Production)</th>
+<th>Total Production Cost</th>
+<th>Manufacturer</th>
+<th>Manufacturer Part #</th>
+<th>Vendor Link</th>
+<th>Datasheet Link</th>
+<th>Supplier</th>
+<th>Supplier Part #</th>
+<th># Ordered</th>
+<th>Date Ordered</th>
+<th># Recieved</th>
+<th>Surplus</th>
+<th>Designator</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1uF Ceramic</td>
+<td>2</td>
+<td>$0.11</td>
+<td>$0.22</td>
+<td>$0.11</td>
+<td>$0.22</td>
+<td>YAGEO</td>
+<td>CC1206KRX7R8BB104</td>
+<td>https://www.digikey.com/en/products/detail/yageo/CC1206KRX7R8BB104/5884627</td>
+<td>https://www.yageo.com/upload/media/product/productsearch/datasheet/mlcc/UPY-GPHC_X7R_6.3V-to-250V_24.pdf</td>
+<td>DigiKey</td>
+<td>311-3564-2-ND</td>
+<td>4</td>
+<td>2/28</td>
+<td></td>
+<td>-4</td>
+<td>C1, C4</td>
+</tr>
+<tr>
+<td>2.2uF Ceramic</td>
+<td>1</td>
+<td>$0.18</td>
+<td>$0.18</td>
+<td>$0.18</td>
+<td>$0.18</td>
+<td>Samsung Electro-Mechanics</td>
+<td>CL31B225KBHNNNE</td>
+<td>https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL31B225KBHNNNE/3886949</td>
+<td>https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/503/CL31B225KBHNNNE_Character.pdf</td>
+<td>DigiKey</td>
+<td>1276-1291-2-ND</td>
+<td>3</td>
+<td>2/28</td>
+<td></td>
+<td>-3</td>
+<td>C2</td>
+</tr>
+<tr>
+<td>10uF Ceramic</td>
+<td>1</td>
+<td>$0.15</td>
+<td>$0.15</td>
+<td>$0.15</td>
+<td>$0.15</td>
+<td>Samsung Electro-Mechanics</td>
+<td>CL31B106KAHNNNE</td>
+<td>https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL31B106KAHNNNE/3887462</td>
+<td>https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/658/CL31B106KAHNNNE_Spec.pdf</td>
+<td>DigiKey</td>
+<td>1276-1804-2-ND</td>
+<td>3</td>
+<td>2/28</td>
+<td></td>
+<td>-3</td>
+<td>C3</td>
+</tr>
+<tr>
+<td>100ohm</td>
+<td>1</td>
+<td>$0.17</td>
+<td>$0.17</td>
+<td>$0.17</td>
+<td>$0.17</td>
+<td>Panasonic Electronic Components</td>
+<td>ERJ-8ENF1000V</td>
+<td>https://www.digikey.com/en/products/detail/panasonic-electronic-components/ERJ-8ENF1000V/88671</td>
+<td>https://industrial.panasonic.com/cdbs/www-data/pdf/RDA0000/AOA0000C304.pdf</td>
+<td>DigiKey</td>
+<td>P100FTR-ND</td>
+<td>3</td>
+<td>2/28</td>
+<td></td>
+<td>-3</td>
+<td>R5</td>
+</tr>
+<tr>
+<td>10k Resistor</td>
+<td>3</td>
+<td>$0.10</td>
+<td>$0.30</td>
+<td>$0.10</td>
+<td>$0.30</td>
+<td>YAGEO</td>
+<td>RC1206FR-0710KL</td>
+<td>https://www.digikey.com/en/products/detail/yageo/RC1206FR-0710KL/728483</td>
+<td>https://www.yageo.com/upload/media/product/products/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf</td>
+<td>DigiKey</td>
+<td>311-10.0KFRCT-ND</td>
+<td>5</td>
+<td>2/28</td>
+<td></td>
+<td>-5</td>
+<td>R3, R4, R6</td>
+</tr>
+<tr>
+<td>22.1k Resistor</td>
+<td>1</td>
+<td>$0.10</td>
+<td>$0.10</td>
+<td>$0.10</td>
+<td>$0.10</td>
+<td>Stackpole Electronics Inc</td>
+<td>RNCP1206FTD22K1</td>
+<td>https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RNCP1206FTD22K1/2240381</td>
+<td>https://www.seielect.com/catalog/sei-rncp.pdf</td>
+<td>DigiKey</td>
+<td>RNCP1206FTD22K1CT-ND</td>
+<td>3</td>
+<td>2/28</td>
+<td></td>
+<td>-3</td>
+<td>R2</td>
+</tr>
+<tr>
+<td>51k Resistor</td>
+<td>1</td>
+<td>$0.10</td>
+<td>$0.10</td>
+<td>$0.10</td>
+<td>$0.10</td>
+<td>Stackpole Electronics Inc</td>
+<td>RMCF1206JT51K0</td>
+<td>https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF1206JT51K0/1753857</td>
+<td>https://www.seielect.com/catalog/sei-rmcf_rmcp.pdf</td>
+<td>DigiKey</td>
+<td>RMCF1206JT51K0CT-ND</td>
+<td>3</td>
+<td>2/28</td>
+<td></td>
+<td>-3</td>
+<td>R1</td>
+</tr>
+<tr>
+<td>3.3uH Inductor</td>
+<td>1</td>
+<td>$0.24</td>
+<td>$0.24</td>
+<td>$0.24</td>
+<td>$0.24</td>
+<td>Murata Electronics</td>
+<td>LQM31PN3R3M00L</td>
+<td>https://www.digikey.com/en/products/detail/murata-electronics/LQM31PN3R3M00L/2594619</td>
+<td>https://search.murata.co.jp/Ceramy/image/img/P02/JELF243B-0013.pdf</td>
+<td>DigiKey</td>
+<td>490-6705-2-ND</td>
+<td>3</td>
+<td>2/28</td>
+<td></td>
+<td>-3</td>
+<td>L1</td>
+</tr>
+<tr>
+<td>LED</td>
+<td>1</td>
+<td>$0.32</td>
+<td>$0.32</td>
+<td>$0.32</td>
+<td>$0.32</td>
+<td>Dialight</td>
+<td>5988260107F</td>
+<td>https://www.digikey.com/en/products/detail/dialight/5988260107F/1291286</td>
+<td>https://s3-us-west-2.amazonaws.com/catsy.557/Dialight_CBI_data_598-1206_Apr2018.pdf</td>
+<td>DigiKey</td>
+<td>350-2052-2-ND</td>
+<td>3</td>
+<td>2/28</td>
+<td></td>
+<td>-3</td>
+<td>D1</td>
+</tr>
+<tr>
+<td>1.5A Fuse</td>
+<td>1</td>
+<td>$0.75</td>
+<td>$0.75</td>
+<td>$0.75</td>
+<td>$0.75</td>
+<td>Littelfuse Inc.</td>
+<td>022501.5MXP</td>
+<td>https://www.digikey.com/en/products/detail/littelfuse-inc/022501.5MXP/777788?&amp;utm_adgroup=&amp;utm_term=&amp;utm_content=&amp;gad_source=1</td>
+<td>https://www.littelfuse.com/assetdocs/littelfuse-fuse-224-225-datasheet?assetguid=26e6ad94-5fb7-4bad-acf6-da1c91c16d87</td>
+<td>DigiKey</td>
+<td>F4663-ND</td>
+<td>3</td>
+<td>2/28</td>
+<td></td>
+<td>-3</td>
+<td>F1</td>
+</tr>
+<tr>
+<td>Fuse Holder</td>
+<td>1</td>
+<td>$0.81</td>
+<td>$0.81</td>
+<td>$0.81</td>
+<td>$0.81</td>
+<td>Keystone Electronics</td>
+<td>4628</td>
+<td>https://www.digikey.com/en/products/detail/keystone-electronics/4628/2137316?&amp;utm_adgroup=&amp;utm_term=&amp;utm_content=&amp;gad_source=1</td>
+<td>https://www.keyelco.com/userAssets/file/M65p44.pdf</td>
+<td>DigiKey</td>
+<td>36-4628-ND</td>
+<td>2</td>
+<td>2/28</td>
+<td></td>
+<td>-2</td>
+<td></td>
+</tr>
+<tr>
+<td>Barrel Jack</td>
+<td>1</td>
+<td>$0.60</td>
+<td>$0.60</td>
+<td>$0.60</td>
+<td>$0.60</td>
+<td>Same Sky (Formerly CUI Devices)</td>
+<td>PJ-037A</td>
+<td>https://www.digikey.com/en/products/detail/same-sky-formerly-cui-devices/PJ-037A/1644545</td>
+<td>https://www.cuidevices.com/product/resource/pj-037a.pdf</td>
+<td>DigiKey</td>
+<td>CP-037A-ND</td>
+<td>2</td>
+<td>2/28</td>
+<td></td>
+<td>-2</td>
+<td>J2</td>
+</tr>
+<tr>
+<td>Ribbon Connectors</td>
+<td>2</td>
+<td>$0.97</td>
+<td>$1.94</td>
+<td>$0.97</td>
+<td>$1.94</td>
+<td>Würth Elektronik</td>
+<td>61200821621</td>
+<td>https://www.digikey.com/en/products/detail/w-rth-elektronik/61200821621/4846916?&amp;utm_adgroup=&amp;utm_term=&amp;utm_content=&amp;gad_source=1</td>
+<td>https://www.we-online.com/components/products/datasheet/61200821621.pdf</td>
+<td>DigiKey</td>
+<td>732-5395-ND</td>
+<td>3</td>
+<td>2/28</td>
+<td></td>
+<td>-3</td>
+<td>P2</td>
+</tr>
+<tr>
+<td>Pushbutton</td>
+<td>3</td>
+<td>$1.00</td>
+<td>$3.00</td>
+<td>$1.00</td>
+<td>$3.00</td>
+<td>Omron Electronics Inc-EMC Div</td>
+<td>B3U-1000P</td>
+<td>https://www.digikey.com/en/products/detail/omron-electronics-inc-emc-div/B3U-1000P/1534338</td>
+<td>https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3u.pdf</td>
+<td>DigiKey</td>
+<td>SW1020TR-ND</td>
+<td>5</td>
+<td>2/28</td>
+<td></td>
+<td>-5</td>
+<td>S1, S2, S3</td>
+</tr>
+<tr>
+<td>3.3V Regulator</td>
+<td>1</td>
+<td>$1.47</td>
+<td>$1.47</td>
+<td>$1.47</td>
+<td>$1.47</td>
+<td>Texas Instruments</td>
+<td>LMR50410Y3FQDBVRQ1</td>
+<td>https://www.digikey.com/en/products/detail/texas-instruments/LMR50410Y3FQDBVRQ1/13562985</td>
+<td>https://www.ti.com/lit/ds/symlink/lmr50410-q1.pdf</td>
+<td>DigiKey</td>
+<td>296-LMR50410Y3FQDBVRQ1TR-ND</td>
+<td>3</td>
+<td>2/28</td>
+<td></td>
+<td>-3</td>
+<td>U1</td>
+</tr>
+<tr>
+<td>Micro USB Port</td>
+<td>1</td>
+<td>$0.77</td>
+<td>$0.77</td>
+<td>$0.77</td>
+<td>$0.77</td>
+<td>GCT</td>
+<td>USB3131-30-0230-A</td>
+<td>https://www.digikey.com/en/products/detail/gct/USB3131-30-0230-A/9859642</td>
+<td>https://gct.co/files/specs/usb3131-spec.pdf</td>
+<td>DigiKey</td>
+<td>2073-USB3131-30-0230-ATR-ND</td>
+<td>0</td>
+<td>2/28</td>
+<td></td>
+<td>0</td>
+<td>J1</td>
+</tr>
+<tr>
+<td>ESP32-S3-WROOM-1-N4</td>
+<td>1</td>
+<td>$5.06</td>
+<td>$5.06</td>
+<td>$5.06</td>
+<td>$5.06</td>
+<td>Espressif Systems</td>
+<td>ESP32-S3-WROOM-1-N4</td>
+<td>https://www.digikey.com/en/products/detail/espressif-systems/ESP32-S3-WROOM-1-N4/16162639</td>
+<td>https://www.espressif.com/sites/default/files/documentation/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf</td>
+<td>DigiKey</td>
+<td>1965-ESP32-S3-WROOM-1-N4TR-ND</td>
+<td>0</td>
+<td>2/28</td>
+<td></td>
+<td>0</td>
+<td>U2</td>
+</tr>
+<tr>
+<td>Ribbon Cable</td>
+<td>1</td>
+<td>$3.85</td>
+<td>$3.85</td>
+<td>$3.85</td>
+<td>$3.85</td>
+<td>Marvic International, Inc.</td>
+<td>530182808045</td>
+<td>https://www.amazon.com/gp/product/B07DFBPZLJ?smid=A64W1E1ZZHST0</td>
+<td>N/A</td>
+<td>Amazon</td>
+<td>B07DFBPZLJ</td>
+<td>1</td>
+<td>2/28</td>
+<td></td>
+<td>-1</td>
+<td></td>
+</tr>
+<tr>
+<td>Battery</td>
+<td>1</td>
+<td>$11.98</td>
+<td>$11.98</td>
+<td>$11.98</td>
+<td>$11.98</td>
+<td>ShenZhen Maxpower Technology</td>
+<td>LCLEBM</td>
+<td>https://www.amazon.com/PAISUE-Rechargeable-Lithium-ion-Multimeter-Microphone/dp/B0B248DSFG?source=ps-sl-shoppingads-lpcontext&amp;ref_=fplfs&amp;smid=A2WEVNKRB72JGE&amp;gQT=1</td>
+<td>N/A</td>
+<td>Amazon</td>
+<td>B0B248DSFG</td>
+<td>1</td>
+<td>2/28</td>
+<td></td>
+<td>-1</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 
 
 
