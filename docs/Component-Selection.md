@@ -18,7 +18,7 @@ My role on my team is to send and recieve data to and from the HMI through an MQ
 
 Selected Part
 
-ESP32-S3-WROOM-1-N4 was recommended by the instructor due to its built in antenna and ease of use compared to the other options. They also have it in stock as well so this will cut down on my overall budget. It is larger that I would like but it does the job without any major hassle so I can work around its size.
+ESP32-S3-WROOM-1-N4 was recommended by the instructor due to its built in antenna and ease of use compared to the other options. They also have it in stock as well so this will cut down on my overall budget. It is larger than I would like but it does the job without any major hassle so I can work around its size.
 
 ### Switching 3.3V Regulator
 
