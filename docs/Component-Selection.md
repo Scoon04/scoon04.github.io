@@ -50,7 +50,7 @@ Any minor components I select must be no smaller than 1206 size, this is for an 
 
 ## ESP32 Pinout Diagram
 
->***View [Schematic Page](Schematic-&-BOM.md) in case this hasent been updated***
+>***Check [Schematic Page](Schematic-&-BOM.md) for most updated information in case this page hasent been updated***
 
 ![Image](https://github.com/user-attachments/assets/4b835f19-0ff4-4484-bf0b-f7c4d0bc6703)
 
