@@ -46,11 +46,11 @@ LCLEBM 9V 1300mah has a larger mah size so it will last a bit longer than the ot
 
 ## Minor Components
 
-Any minor components I select must be no smaller than 1206 size, this is for an easier time soldering components. Some other minor components I need are pushbuttons for programming the ESP32, Fuses, and some debug items. These items aren't major so I havent done a component selection for them, but I do have a list of minor components on the Minor Components Page (located under the Resources Page) that I am constantly updating. You can also find similar items in the BOM on the [Schematic & BOM Page](Schematic-&-BOM.md).
+Any minor components I select must be no smaller than 1206 size, this is for an easier time soldering components. Some other minor components I need are pushbuttons for programming the ESP32, Fuses, and some debug items. These items aren't major so I havent done a component selection for them, but I do have a list of minor components on the Minor Components Page (located under the Resources Page) that I am constantly updating. You can also find a larger more detailed list of items on the [BOM Page](Bill-of-Materials.md).
 
 ## ESP32 Pinout Diagram
 
->***Check [Schematic Page](Schematic-&-BOM.md) for most updated information in case this page hasent been updated***
+>***Check [Schematic Page](Schematic.md) for most updated information in case this diagram hasent been updated***
 
 ![Image](https://github.com/user-attachments/assets/4b835f19-0ff4-4484-bf0b-f7c4d0bc6703)
 
