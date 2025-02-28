@@ -22,9 +22,9 @@ ESP32-S3-WROOM-1-N4 was recommended by the instructor due to its built in antenn
 
 | **Component** | **Pros** | **Cons** |
 |---------------|----------|----------|
-| MAX763AESA+<br>![Image](https://github.com/user-attachments/assets/9ffbad12-9ff0-45da-8fb7-31ee5920eac3)<br>$10.00<br>[Product Page](https://www.digikey.com/en/products/detail/analog-devices-inc-maxim-integrated/MAX763AESA/1513233) | - Easy to solder | - Very Expensive<br>- Lowest input voltage at 11V<br>- Only 500mA current output |
+| MAX763AESA+<br>![Image](https://github.com/user-attachments/assets/9ffbad12-9ff0-45da-8fb7-31ee5920eac3)<br>$10.00<br>[Product Page](https://www.digikey.com/en/products/detail/analog-devices-inc-maxim-integrated/MAX763AESA/1513233) | - Easy to solder<br>- Up to 11V input | - Very Expensive<br>- Lowest input voltage at 11V<br>- Only 500mA current output |
 | LTC3621EMS8E-3.3#PBF<br>![Image](https://github.com/user-attachments/assets/79b94fa0-26db-4533-ac2b-3b30e231429f)<br>$8.77<br>[Product Page](https://www.digikey.com/en/products/detail/analog-devices-inc/LTC3621EMS8E-3-3-PBF/4840601) | - Wide operating temp range<br>- Up to 17V input<br>- 1A Output Current  | - Very Expensive<br>- Datasheet was confusing<br>- Requires soldering under part |
-| LMR50410Y3FQDBVRQ1<br>![Image](https://github.com/user-attachments/assets/27154629-ffba-48d2-8ea3-39eddf6070cc)<br>$1.47<br>[Product Page](https://www.digikey.com/en/products/detail/texas-instruments/LMR50410Y3FQDBVRQ1/13562985) | - Better priced than the other options<br>- Useful datasheet<br>- Up to 36V input<br>- 1A Output Current<br>- Higher Operating Temp Range | - Nothing stands out a being a con. This just seems like a better product overall for my use case |
+| LMR50410Y3FQDBVRQ1<br>![Image](https://github.com/user-attachments/assets/27154629-ffba-48d2-8ea3-39eddf6070cc)<br>$1.47<br>[Product Page](https://www.digikey.com/en/products/detail/texas-instruments/LMR50410Y3FQDBVRQ1/13562985) | - Better priced than the other options<br>- Useful datasheet<br>- Up to 36V input<br>- 1A Output Current<br>- Higher Operating Temp Range | - Min input voltage may not be low enough to support 5V power from the micro usb for programming |
 
 Selected Part
 
@@ -46,9 +46,9 @@ LCLEBM 9V 1300mah has a larger mah size so it will last a bit longer than the ot
 
 >***VIEW SCHEMATIC PAGE FOR MOST UPDATED INFO ON THE PINS USED***
 
-![Image](https://github.com/user-attachments/assets/c9f38d54-e26a-4491-99a1-08f9e845aa43)
+![Image](https://github.com/user-attachments/assets/4b835f19-0ff4-4484-bf0b-f7c4d0bc6703)
 
-My ESP32 module will only need the UART pins to give and recieve data from the PIC microcontroller. The reason its not doing more is becuase the class requirements need us to use at least one PIC and ESP32 controller. The HMI will have an EPS32 module controlling it, so if I only used the ESP32 module then the project wouldn't meet class requirements. The plan is to use MQTT to send data between ESP32 modules and then my module will use UART to give and recieve data from the local PIC controller.
+My ESP32 pins will only use the RX and TX pins for the uart data stream and the D+ and D- for programming with a micro usb port. This will communicate wirelessly through a MQTT server to the HMI to share and collect more data, similar purpose to the uart stream but wireless. It will also communicate with a online user to do similar things that the in person user can do. See the [Process Diagram](https://egr314-2025-s-309.github.io/Block-Process-Diagrams-Message-Structure/) on the team website for more info on this.
 
 ## Power Budget
 
