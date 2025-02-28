@@ -21,7 +21,7 @@ For ASU's Spring 2025 semester of the class EGR 314, my responsibility for my te
 
 [Component Selection Page](Component-Selection.md)
 
-[Schematic Page](Schematic-&-BOM.md)
+[Schematic Page](Schematic.md)
 
 [Bill of Materials Page](Bill-of-Materials.md)
 
