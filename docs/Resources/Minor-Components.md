@@ -1,14 +1,14 @@
 ---
-title: Resources
+title: Minor Components
 ---
 
 [How to program esp32 wroom chip with dev board](https://www.youtube.com/watch?v=ndEeFQ5mi_g)
 
 Needs 2 pushbuttons for boot and en.
 
-Components
+## Components
 
-Generic Components (1206 Surface Mount Minimum)
+### Generic Components (1206 Surface Mount Minimum)
 
 - [100 Ohm Resistor](https://www.digikey.com/en/products/detail/panasonic-electronic-components/ERJ-8ENF1000V/88671)
 - [10k Resistor](https://www.digikey.com/en/products/detail/yageo/RC1206FR-0710KL/728483)
@@ -22,17 +22,17 @@ Generic Components (1206 Surface Mount Minimum)
 - [Fuse Holder](https://www.digikey.com/en/products/detail/keystone-electronics/4628/2137316?&utm_adgroup=&utm_term=&utm_content=&gad_source=1)
 - [Fuse](https://www.digikey.com/en/products/detail/littelfuse-inc/022501.5MXP/777788?&utm_adgroup=&utm_term=&utm_content=&gad_source=1)
 
-For ESP32-s3
+### For ESP32-s3
 
 - [PushButton](https://www.digikey.com/en/products/detail/omron-electronics-inc-emc-div/B3U-1000P/1534338)
 - [Micro-USB Port](https://www.digikey.com/en/products/detail/gct/USB3131-30-0230-A/9859642)
 
-Ribbon Cable Stuff
+### Ribbon Cable Stuff
 
 - [Ribbon Cable Ports](https://www.digikey.com/en/products/detail/w-rth-elektronik/61200821621/4846916?&utm_adgroup=&utm_term=&utm_content=&gad_source=1)
 - [Ribbon Cable](https://www.amazon.com/gp/product/B07DFBPZLJ?smid=A64W1E1ZZHST0)
 
-Other
+### Other
 
 - [Barrel Jack](https://www.digikey.com/en/products/detail/same-sky-formerly-cui-devices/PJ-037A/1644545)
 - [LED](https://www.digikey.com/en/products/detail/dialight/5988260107F/1291286)
