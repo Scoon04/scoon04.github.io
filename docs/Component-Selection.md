@@ -71,4 +71,4 @@ The power budget on my board only needs to power the microcontroller. However, a
 |  | Battery | B0B248DSFG | 9V | 1 | 1300 |
 | **Battery Life** | **Parts Required Current** | **Battery Current (mAh)** | **Lowest Runtime (hh:mm)** |  |  |
 |  | 355 | 1300 | 03:39 |  |  |
-
+| **25% Safety Margin** | 443 | 1300 | 02:56 |  |  |
