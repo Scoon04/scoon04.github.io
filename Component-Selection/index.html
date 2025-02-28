@@ -450,22 +450,42 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#component-selection" class="md-nav__link">
+    Component Selection
+  </a>
+  
+    <nav class="md-nav" aria-label="Component Selection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#esp32" class="md-nav__link">
     ESP32
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#switching-33v-regulator" class="md-nav__link">
     Switching 3.3V Regulator
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#power-supply" class="md-nav__link">
     Power Supply
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#minor-components" class="md-nav__link">
+    Minor Components
   </a>
   
 </li>
@@ -625,22 +645,42 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#component-selection" class="md-nav__link">
+    Component Selection
+  </a>
+  
+    <nav class="md-nav" aria-label="Component Selection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#esp32" class="md-nav__link">
     ESP32
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#switching-33v-regulator" class="md-nav__link">
     Switching 3.3V Regulator
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#power-supply" class="md-nav__link">
     Power Supply
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#minor-components" class="md-nav__link">
+    Minor Components
   </a>
   
 </li>
@@ -685,8 +725,9 @@
   <h1>Component Selection</h1>
 
 <h2 id="my-team-role">My Team Role</h2>
-<p>My role on my team is to send and recieve data to and from the HMI through an MQTT server. I will recieve data from the gyroscope and send it to the HMI wirelessly with esp32. I will also recieve wireless data from the HMI and send it to the motor driver. Additionally, I will be making sure the power is implemented properly.</p>
-<h2 id="esp32">ESP32</h2>
+<p>My role on my team is to send and recieve data to and from the HMI through an MQTT server. I will recieve data from the gyroscope and send it to the HMI wirelessly with esp32. I will also recieve wireless data from the HMI and send it to the motor driver. Additionally, I will be making sure the power is implemented properly accross the other boards.</p>
+<h2 id="component-selection">Component Selection</h2>
+<h3 id="esp32">ESP32</h3>
 <table>
 <thead>
 <tr>
@@ -714,8 +755,8 @@
 </tbody>
 </table>
 <p>Selected Part</p>
-<p>ESP32-S3-WROOM-1-N4 was recommended by the instructor due to its built in antenna and ease of use compared to the other options. It is larger that I would like but it does the job without any major hassle so I can work around its size.</p>
-<h2 id="switching-33v-regulator">Switching 3.3V Regulator</h2>
+<p>ESP32-S3-WROOM-1-N4 was recommended by the instructor due to its built in antenna and ease of use compared to the other options. They also have it in stock as well so this will cut down on my overall budget. It is larger that I would like but it does the job without any major hassle so I can work around its size.</p>
+<h3 id="switching-33v-regulator">Switching 3.3V Regulator</h3>
 <table>
 <thead>
 <tr>
@@ -738,13 +779,13 @@
 <tr>
 <td>LMR50410Y3FQDBVRQ1<br><a class="glightbox" href="https://github.com/user-attachments/assets/27154629-ffba-48d2-8ea3-39eddf6070cc" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Image" src="https://github.com/user-attachments/assets/27154629-ffba-48d2-8ea3-39eddf6070cc" /></a><br>$1.47<br><a href="https://www.digikey.com/en/products/detail/texas-instruments/LMR50410Y3FQDBVRQ1/13562985">Product Page</a></td>
 <td>- Better priced than the other options<br>- Useful datasheet<br>- Up to 36V input<br>- 1A Output Current<br>- Higher Operating Temp Range</td>
-<td>- Min input voltage may not be low enough to support 5V power from the micro usb for programming</td>
+<td>- Min input voltage is close to 5V input from the micro usb port so it may step down slightly below 3.3V</td>
 </tr>
 </tbody>
 </table>
 <p>Selected Part</p>
-<p>LMR50410Y3FQDBVRQ1 is the best priced option and meets all of my requirements. I plan on using a 9V 1A battery so this part allows me to get the most performance out of that and allows the parts to get all the volts and current they need. It also shouldnt overheat due to 9V being well under its 36V max input, as well as it having a higher operating temp range than the other choices.</p>
-<h2 id="power-supply">Power Supply</h2>
+<p>LMR50410Y3FQDBVRQ1 is the best priced option and meets all of my requirements. I plan on using a 9V 1A battery so this part allows me to get the most performance out of that and allows the parts to get all the volts and current they need. It also shouldnt overheat due to 9V being well under its 36V max input, as well as it having a higher operating temp range than the other choices. It also will be able to step down the 5V micro usb input power so it doesnt fry the ESP32 chip. Even thought the output may not be exactly 3.3V with the 5V micro usb power, it should still be within the ESP32's operating voltage.</p>
+<h3 id="power-supply">Power Supply</h3>
 <table>
 <thead>
 <tr>
@@ -773,6 +814,8 @@
 </table>
 <p>Selected Part</p>
 <p>LCLEBM 9V 1300mah has a larger mah size so it will last a bit longer than the other options without having to recharging. It's also a great price for a 2 pack, and has a quick delivery time unlike one of the other options. It overall is slightly better than the other options because of its price, mah size, and delivery time.</p>
+<h2 id="minor-components">Minor Components</h2>
+<p>Any minor components I select must be no smaller than 1206 size, this is for an easier time soldering components. Some other minor components I need are pushbuttons for programming the ESP32, Fuses, and some debug items. These items aren't major so I havent done a component selection for them, but I do have a list of minor components on the <a href="Minor-Components.md">Minor Components Page</a> (located under the Resources Page) that I am constantly updating. You can also find similar items in the BOM on the <a href="../Schematic-%26-BOM/">Schematic &amp; BOM Page</a>.</p>
 <h2 id="esp32-pinout-diagram">ESP32 Pinout Diagram</h2>
 <blockquote>
 <p><strong><em>VIEW SCHEMATIC PAGE FOR MOST UPDATED INFO ON THE PINS USED</em></strong></p>
@@ -780,6 +823,7 @@
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/4b835f19-0ff4-4484-bf0b-f7c4d0bc6703" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Image" src="https://github.com/user-attachments/assets/4b835f19-0ff4-4484-bf0b-f7c4d0bc6703" /></a></p>
 <p>My ESP32 pins will only use the RX and TX pins for the uart data stream and the D+ and D- for programming with a micro usb port. This will communicate wirelessly through a MQTT server to the HMI to share and collect more data, similar purpose to the uart stream but wireless. It will also communicate with a online user to do similar things that the in person user can do. See the <a href="https://egr314-2025-s-309.github.io/Block-Process-Diagrams-Message-Structure/">Process Diagram</a> on the team website for more info on this.</p>
 <h2 id="power-budget">Power Budget</h2>
+<p>The power budget on my board only needs to power the microcontroller. However, all 3 boards on the spinning top are going to use the same power do this isnt an accurate representation of the true battery life of the full project.</p>
 <table>
 <thead>
 <tr>
