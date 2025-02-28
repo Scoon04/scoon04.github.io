@@ -1,5 +1,5 @@
 ---
-title: Schematic & BOM
+title: Schematic
 ---
 
 ## Schematic
