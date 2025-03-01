@@ -12,9 +12,9 @@ My role on my team is to send and recieve data to and from the HMI through an MQ
 
 | **Component** | **Pros** | **Cons** |
 |---------------|----------|----------|
-| ESP32-C3<br>![Image](https://github.com/user-attachments/assets/8d6c4125-fae5-4819-b6b3-0283b21b2964)<br>$1.00<br>[Product Page](https://www.digikey.com/en/products/detail/espressif-systems/ESP32-C3/14115593?&utm_adgroup=&utm_term=&utm_content=&gad_source=1) | - More Affordable<br>- Small Size | - Needs external antenna to opperate normally<br>- Extra components take up more space |
-| ESP32-S3-WROOM-1-N4<br>![Image](https://github.com/user-attachments/assets/466d1162-997f-4f1b-a346-3a31fbbc5549)<br>$2.95<br>[Product Page](https://www.digikey.com/en/products/detail/espressif-systems/ESP32-S3-WROOM-1-N4/16162639) | - Recomended by Instructor<br>- Build in Antenna | - Larger in Size<br>- More expensive |
-| ESP32-S3<br>![Image](https://github.com/user-attachments/assets/0f992329-f761-43f9-8f02-2ab5bf204e94)<br>$1.50<br>[Product Page](https://www.digikey.com/en/products/detail/espressif-systems/ESP32-D0WD-V3/11657616?&utm_adgroup=&utm_term=&utm_content=&gad_source=1) | - More Affordable<br>- Small Size | - Needs external antenna to opperate normally<br>- More of a hassle to work with |
+| ESP32-C3<br>![Image](https://github.com/user-attachments/assets/8d6c4125-fae5-4819-b6b3-0283b21b2964)<br>$1.00<br>[Product Page](https://www.digikey.com/en/products/detail/espressif-systems/ESP32-C3/14115593?&utm_adgroup=&utm_term=&utm_content=&gad_source=1) | - More Affordable<br>- Small Size | - Needs external antenna to opperate normally<br>- Extra components take up more space<br>- Harder to solder |
+| ESP32-S3-WROOM-1-N4<br>![Image](https://github.com/user-attachments/assets/466d1162-997f-4f1b-a346-3a31fbbc5549)<br>$2.95<br>[Product Page](https://www.digikey.com/en/products/detail/espressif-systems/ESP32-S3-WROOM-1-N4/16162639) | - Recomended by Instructor<br>- Build in Antenna<br>- Easier to solder | - Larger in Size<br>- More expensive |
+| ESP32-S3<br>![Image](https://github.com/user-attachments/assets/0f992329-f761-43f9-8f02-2ab5bf204e94)<br>$1.50<br>[Product Page](https://www.digikey.com/en/products/detail/espressif-systems/ESP32-D0WD-V3/11657616?&utm_adgroup=&utm_term=&utm_content=&gad_source=1) | - More Affordable<br>- Small Size | - Needs external antenna to opperate normally<br>- More of a hassle to work with<br>- Harder to solder |
 
 Selected Part
 
