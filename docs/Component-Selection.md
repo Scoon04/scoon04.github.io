@@ -18,7 +18,9 @@ My role on my team is to send and recieve data to and from the HMI through an MQ
 
 Selected Part
 
-ESP32-S3-WROOM-1-N4 was recommended by the instructor due to its built in antenna and ease of use compared to the other options. They also have it in stock as well so this will cut down on my overall budget. It is larger than I would like but it does the job without any major hassle so I can work around its size.
+>ESP32-S3-WROOM-1-N4
+
+This part was recommended by the instructor due to its built in antenna and ease of use compared to the other options. They also have it in stock as well so this will cut down on my overall budget. It is larger than I would like but it does the job without any major hassle so I can work around its size.
 
 ### Switching 3.3V Regulator
 
@@ -30,7 +32,9 @@ ESP32-S3-WROOM-1-N4 was recommended by the instructor due to its built in antenn
 
 Selected Part
 
-LMR50410Y3FQDBVRQ1 is the best priced option and meets all of my requirements. I plan on using a 9V 1A battery so this part allows me to get the most performance out of that and allows the parts to get all the volts and current they need. It also shouldnt overheat due to 9V being well under its 36V max input, as well as it having a higher operating temp range than the other choices. It also will be able to step down the 5V micro usb input power so it doesnt fry the ESP32 chip. Even thought the output may not be exactly 3.3V with the 5V micro usb power, it should still be within the ESP32's operating voltage.
+>LMR50410Y3FQDBVRQ1
+
+This is the best priced option and meets all of my requirements. I plan on using a 9V 1A battery so this part allows me to get the most performance out of that and allows the parts to get all the volts and current they need. It also shouldnt overheat due to 9V being well under its 36V max input, as well as it having a higher operating temp range than the other choices. It also will be able to step down the 5V micro usb input power so it doesnt fry the ESP32 chip. Even thought the output may not be exactly 3.3V with the 5V micro usb power, it should still be within the ESP32's operating voltage.
 
 ### Power Supply
 
@@ -42,7 +46,9 @@ LMR50410Y3FQDBVRQ1 is the best priced option and meets all of my requirements. I
 
 Selected Part
 
-LCLEBM 9V 1300mah has a larger mah size so it will last a bit longer than the other options without having to recharging. It's also a great price for a 2 pack, and has a quick delivery time unlike one of the other options. It overall is slightly better than the other options because of its price, mah size, and delivery time.
+>LCLEBM 9V 1300mah
+
+This part has a larger mah size so it will last a bit longer than the other options without having to recharging. It's also a great price for a 2 pack, and has a quick delivery time unlike one of the other options. It overall is slightly better than the other options because of its price, mah size, and delivery time.
 
 ## Minor Components
 
