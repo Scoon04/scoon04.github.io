@@ -27,6 +27,8 @@ For ASU's Spring 2025 semester of the class EGR 314, my responsibility for my te
 
 [PCB Design Page](PCB.md)
 
+[API Page](API.md)
+
 ## Team Website
 
 [Team Website](https://egr314-2025-s-309.github.io/)
