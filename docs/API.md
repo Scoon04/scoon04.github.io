@@ -8,7 +8,7 @@ title: API
 
 |  | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 | Byte 7 | Byte 8 |
 |---|---|---|---|---|---|---|---|---|
-| Variable Name | motorDir_pref1 | motorDir_pref2 | motorDir_sender | motorDir_receiver | motorDir_data1 | motorDir_data2 | motorDir_suf1 | motorDir_suf2 |
+| Variable Name | motorDir_pref | motorDir_pref | motorDir_sender | motorDir_receiver | motorDir_data | motorDir_data | motorDir_suf | motorDir_suf |
 | Variable Type | uint8_t | uint8_t | uint8_t | uint8_t | uint16_t | uint16_t | uint8_t | uint8_t |
 | Min Value | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Max Value | 255 | 255 | 255 | 255 | 65535 | 65535 | 255 | 255 |
@@ -18,7 +18,7 @@ title: API
 
 |  | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 | Byte 7 | Byte 8 |
 |---|---|---|---|---|---|---|---|---|
-| Variable Name | rotVel_pref1 | rotVel_pref2 | rotVel_sender | rotVel_receiver | rotVel_data1 | rotVel_data2 | rotVel_suf1 | rotVel_suf2 |
+| Variable Name | rotVel_pref | rotVel_pref | rotVel_sender | rotVel_receiver | rotVel_data | rotVel_data | rotVel_suf | rotVel_suf |
 | Variable Type | uint8_t | uint8_t | uint8_t | uint8_t | uint16_t | uint16_t | uint8_t | uint8_t |
 | Min Value | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Max Value | 255 | 255 | 255 | 255 | 65535 | 65535 | 255 | 255 |
