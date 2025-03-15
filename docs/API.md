@@ -11,8 +11,8 @@ title: API
 | Variable Name | motorDir_pref | motorDir_pref | motorDir_sender | motorDir_receiver | motorDir_data | motorDir_data | motorDir_suf | motorDir_suf |
 | Variable Type | uint16_t | uint16_t | uint8_t | uint8_t | uint16_t | uint16_t | uint16_t | uint16_t |
 | Min Value | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Max Value | 255 | 255 | 255 | 255 | 65535 | 65535 | 255 | 255 |
-| Example Value | 100 | 101 | 205 | 220 | 2886 | 17025 | 200 | 201 |
+| Max Value | 65535 | 65535 | 255 | 255 | 65535 | 65535 | 65535 | 65535 |
+| Example Value | 100 | 10001 | 205 | 220 | 2886 | 17025 | 2040 | 2001 |
 
 ### Rotational Velocity (Type 3)
 
@@ -21,5 +21,5 @@ title: API
 | Variable Name | rotVel_pref | rotVel_pref | rotVel_sender | rotVel_receiver | rotVel_data | rotVel_data | rotVel_suf | rotVel_suf |
 | Variable Type | uint16_t | uint16_t | uint8_t | uint8_t | uint16_t | uint16_t | uint16_t | uint16_t |
 | Min Value | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Max Value | 255 | 255 | 255 | 255 | 65535 | 65535 | 255 | 255 |
-| Example Value | 25 | 205 | 253 | 164 | 53244 | 27784 | 237 | 21 |
+| Max Value | 65535 | 65535 | 255 | 255 | 65535 | 65535 | 65535 | 65535 |
+| Example Value | 625 | 305 | 253 | 164 | 53244 | 27784 | 7357 | 21346 |
