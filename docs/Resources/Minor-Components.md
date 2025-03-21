@@ -37,3 +37,11 @@ Needs 2 pushbuttons for boot and en.
 - [Barrel Jack](https://www.digikey.com/en/products/detail/same-sky-formerly-cui-devices/PJ-037A/1644545)
 - [LED](https://www.digikey.com/en/products/detail/dialight/5988260107F/1291286)
 
+### NEW DESIGN COMPONENTS
+
+- [Voltage Regulator](https://www.digikey.com/en/products/detail/onsemi/LM2575D2T-3-3R4G/1476688)
+- [Resettable Fuse](https://www.digikey.com/en/products/detail/bel-fuse-inc/0ZCJ0075AF2E/4156135)
+- [100uF Capacitor](https://www.digikey.com/en/products/detail/w%C3%BCrth-elektronik/865080343009/5728014)
+- [330uF Capacitor](https://www.digikey.com/en/products/detail/panasonic-electronic-components/EEE-FTC331XAP/2796905)
+- [330 uH Inductor](https://www.digikey.com/en/products/detail/w%C3%BCrth-elektronik/74404086331/8134308)
+- [1N5819 Diode](https://www.digikey.com/en/products/detail/diodes-incorporated/1N5819HW-7-F/814970)
