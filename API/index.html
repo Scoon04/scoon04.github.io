@@ -925,8 +925,22 @@
 <td>7357</td>
 <td>21346</td>
 </tr>
+<tr>
+<td>Expected Values</td>
+<td>0 (0x00)</td>
+<td>3 (0x03)</td>
+<td>252 (0xFC)</td>
+<td>255 (0xFF)</td>
+<td>Varies</td>
+<td>Varies</td>
+<td>0 (0x00)</td>
+<td>34 (0x22)</td>
+</tr>
 </tbody>
 </table>
+<blockquote>
+<p>The expected value of rotational velocity is set to varies. This is because the value will be read in decimal form and converted to hexidecimal to send. This means I need to be ready to recieve a wide variety of data. The other data is treated as a digital state change (if x then do y). This data is being continuously updated.</p>
+</blockquote>
 
 
 
