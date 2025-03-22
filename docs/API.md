@@ -4,6 +4,9 @@ title: API
 
 ## Message Types Breakdown
 
+Below is a breakdown of how the messages im hangling should be structured. It shows the overall length of the message, the name of the variable each byte is stored in, the min and max values (based on the message types), an example of what value would be exceptable, and what values im expecting. Im able to recieve a wide variety of data for each byte, but im only looking for a couple of values. This is why the expected values row is very important.
+> Example: I can recieve up to 255 for message sender, but I only need to know 4 values (one for each teamate), so while 205 fits within the acceptable range, I may not be looking for that value specifically.
+
 ### Motor Direction (Type 1)
 
 |  | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 | Byte 7 | Byte 8 |
@@ -13,6 +16,9 @@ title: API
 | Min Value | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Max Value | 65535 | 65535 | 255 | 255 | 65535 | 65535 | 65535 | 65535 |
 | Example Value | 100 | 10001 | 205 | 220 | 2886 | 17025 | 2040 | 2001 |
+| Expected Values | 0 (0x00) | 1 (0x01) | 255 (0xFF) | 253 (0xFD) | 0 (0x00)<br>0 (0x00) | 64 (0x40)<br>65 (0x41) | 0 (0x00) | 32 (0x20) |
+
+> Some variables are stored in the same variable but across multiple bytes. Any 2 bytes that share a variable name will store the expected values togeather. Example: motorDir_pref has 2 bytes. Byte 1 = 0x00, Byte 2 = 0x01. The actual stored value will look like this: 0x0001. This takes two 8 bit segments and strings them togeather.
 
 ### Rotational Velocity (Type 3)
 
