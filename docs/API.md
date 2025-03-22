@@ -32,3 +32,5 @@ Below is a breakdown of how the messages im hangling should be structured. It sh
 | Expected Values | 0 (0x00) | 3 (0x03) | 252 (0xFC) | 255 (0xFF) | Varies | Varies | 0 (0x00) | 34 (0x22) |
 
 > The expected value of rotational velocity is set to varies. This is because the value will be read in decimal form and converted to hexidecimal to send. This means I need to be ready to recieve a wide variety of data. The other data is treated as a digital state change (if x then do y). This data is being continuously updated.
+
+For more information about the data types and communication with the team, visit the [Team Message Page](https://egr314-2025-s-309.github.io/Block-Process-Diagrams-Message-Structure/)
