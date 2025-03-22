@@ -763,6 +763,10 @@
   <h1>API</h1>
 
 <h2 id="message-types-breakdown">Message Types Breakdown</h2>
+<p>Below is a breakdown of how the messages im hangling should be structured. It shows the overall length of the message, the name of the variable each byte is stored in, the min and max values (based on the message types), an example of what value would be exceptable, and what values im expecting. Im able to recieve a wide variety of data for each byte, but im only looking for a couple of values. This is why the expected values row is very important.</p>
+<blockquote>
+<p>Example: I can recieve up to 255 for message sender, but I only need to know 4 values (one for each teamate), so while 205 fits within the acceptable range, I may not be looking for that value specifically.</p>
+</blockquote>
 <h3 id="motor-direction-type-1">Motor Direction (Type 1)</h3>
 <table>
 <thead>
@@ -834,8 +838,22 @@
 <td>2040</td>
 <td>2001</td>
 </tr>
+<tr>
+<td>Expected Values</td>
+<td>0 (0x00)</td>
+<td>1 (0x01)</td>
+<td>255 (0xFF)</td>
+<td>253 (0xFD)</td>
+<td>0 (0x00)<br>0 (0x00)</td>
+<td>64 (0x40)<br>65 (0x41)</td>
+<td>0 (0x00)</td>
+<td>32 (0x20)</td>
+</tr>
 </tbody>
 </table>
+<blockquote>
+<p>Some variables are stored in the same variable but across multiple bytes. Any 2 bytes that share a variable name will store the expected values togeather. Example: motorDir_pref has 2 bytes. Byte 1 = 0x00, Byte 2 = 0x01. The actual stored value will look like this: 0x0001. This takes two 8 bit segments and strings them togeather.</p>
+</blockquote>
 <h3 id="rotational-velocity-type-3">Rotational Velocity (Type 3)</h3>
 <table>
 <thead>
