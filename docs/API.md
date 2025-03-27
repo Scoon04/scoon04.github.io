@@ -11,12 +11,12 @@ Below is a breakdown of how the messages im hangling should be structured. It sh
 
 |  | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 | Byte 7 | Byte 8 |
 |---|---|---|---|---|---|---|---|---|
-| Variable Name | motorDir_pref | motorDir_pref | motorDir_sender | motorDir_receiver | motorDir_data | motorDir_data | motorDir_suf | motorDir_suf |
+| Variable Name | msgPref | msgPref | motorDir_sender | motorDir_receiver | motorDir_data | motorDir_data | msgSuf | msgSuf |
 | Variable Type | uint16_t | uint16_t | uint8_t | uint8_t | uint16_t | uint16_t | uint16_t | uint16_t |
 | Min Value | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Max Value | 65535 | 65535 | 255 | 255 | 65535 | 65535 | 65535 | 65535 |
 | Example Value | 100 | 10001 | 205 | 220 | 2886 | 17025 | 2040 | 2001 |
-| Expected Values | 0 (0x00) | 1 (0x01) | 255 (0xFF) | 253 (0xFD) | 0 (0x00)<br>0 (0x00) | 64 (0x40)<br>65 (0x41) | 0 (0x00) | 32 (0x20) |
+| Expected Values | A | Z | 255 (0xFF) | 253 (0xFD) | 0 (0x00)<br>0 (0x00) | 64 (0x40)<br>65 (0x41) | Y | B |
 
 > Some variables are stored in the same variable but across multiple bytes. Any 2 bytes that share a variable name will store the expected values togeather. Example: motorDir_pref has 2 bytes. Byte 1 = 0x00, Byte 2 = 0x01. The actual stored value will look like this: 0x0001. This takes two 8 bit segments and strings them togeather.
 
@@ -24,12 +24,12 @@ Below is a breakdown of how the messages im hangling should be structured. It sh
 
 |  | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 | Byte 7 | Byte 8 |
 |---|---|---|---|---|---|---|---|---|
-| Variable Name | rotVel_pref | rotVel_pref | rotVel_sender | rotVel_receiver | rotVel_data | rotVel_data | rotVel_suf | rotVel_suf |
+| Variable Name | msgPref | msgPref | rotVel_sender | rotVel_receiver | rotVel_data | rotVel_data | msgSuf | msgSuf |
 | Variable Type | uint16_t | uint16_t | uint8_t | uint8_t | uint16_t | uint16_t | uint16_t | uint16_t |
 | Min Value | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Max Value | 65535 | 65535 | 255 | 255 | 65535 | 65535 | 65535 | 65535 |
 | Example Value | 625 | 305 | 253 | 164 | 53244 | 27784 | 7357 | 21346 |
-| Expected Values | 0 (0x00) | 3 (0x03) | 252 (0xFC) | 255 (0xFF) | Varies | Varies | 0 (0x00) | 34 (0x22) |
+| Expected Values | A | Z | 252 (0xFC) | 255 (0xFF) | Varies | Varies | Y | B |
 
 > The expected value of rotational velocity is set to varies. This is because the value will be read in decimal form and converted to hexidecimal to send. This means I need to be ready to recieve a wide variety of data. The other data is treated as a digital state change (if x then do y). This data is being continuously updated.
 
@@ -37,81 +37,92 @@ For more information about the data types and communication with the team, visit
 
 ## API Code
 ```
-from machine import UART
-from machine import Pin
+from machine import UART, Pin
 import time
 import uasyncio as asyncio
 
-# initialize a new  UART class
-uart = UART(2, 9600, tx = 17, rx = 16)
-# run the init method with more details including baudrate and parity
-uart.init(9600, bits = 8, parity = None, stop = 1) 
+# UART Setup
+#uart = UART(0, 9600, tx = 43, rx = 44) #  My board
+uart = UART(2, 9600, tx = 17, rx = 16) # Dev board
+uart.init(9600, bits = 8, parity = None, stop = 1)
+#led = Pin(16, Pin.OUT)
 
-# Message length (bytes)
-msgLen = 8
+# Max Message length (bytes)
+maxMsgLen = 64
 
 # Set ID's
-Bruce = bytes([0xFF])
-Baron = bytes([0xFE])
-Aadish = bytes([0xFD])
-Shaurya = bytes([0xFC])
+Bruce = b'\xFF'
+Baron = b'\xFE'
+Aadish = b'\xFD'
+Shaurya = b'\xFC'
+Broadcast = b'X'
+
+# Prefix and Suffix
+msgPref = b'AZ'
+msgSuf = b'YB'
 
 # Define bytes in data
 # Motor Direction
-motorDir_pref = bytes([0x00,0x01])
 motorDir_sender = Bruce
 motorDir_receiver = Aadish
-motorDir_suf = bytes([0x00,0x20])
 # Rotational Velocity
-rotVel_pref = bytes([0x00,0x03])
 rotVel_sender = Shaurya
 rotVel_receiver = Bruce
-rotVel_suf = bytes([0x00,0x22])
+
+msg = b''
+
+def readUART():
+    msg = b''
+    found_prefix = False
+    while True:
+        if uart.any():  # Check if there is data available
+            byte = uart.read(1)  # Read one byte at a time
+            if not found_prefix:
+                if byte == msgPref[:1]:  # First byte matches first part of prefix
+                    msg = byte  # Reset and start storing
+                    next_byte = uart.read(1)  # Read the next byte
+                    if next_byte == msgPref[1:]:  # Second byte matches
+                        msg += next_byte
+                        found_prefix = True
+                continue  # Ignore any other byte before prefix
+            else:
+                msg += byte
+                if msg.endswith(msgSuf):
+                    break  # Suffix found, stop reading
+    # Ensure valid message format and store sender and receiver
+    if len(msg) <= maxMsgLen and msg[:2] == msgPref and msg[-2:] == msgSuf:
+        sender = msg[2:3]
+        receiver = msg[3:4]
+        if receiver in [Baron, Bruce, Broadcast]:  # Check if message is for me
+            return msg  # Return the entire message
+        else:
+            uart.write(msg)  # Forward message if not intended for me
+    return None
 
 # Send uart function
 def sendUART(data, type):
-    if len(data) == 2: # Is data 2 bytes long
-        if type == 'motorDir':
-            message = motorDir_pref + motorDir_sender + motorDir_receiver + data + motorDir_suf
-            uart.write(message)
-        elif type == 'rotVel':
-            message = rotVel_pref + rotVel_sender + rotVel_receiver + data + rotVel_suf
-            uart.write(message)
-    else:
-        raise ValueError('Invalid data length')
+    if type == 'motorDir':
+        message = msgPref + motorDir_sender + motorDir_receiver + data + msgSuf
+        uart.write(message)
+    elif type == 'rotVel':
+        message = msgPref + rotVel_sender + rotVel_receiver + data + msgSuf
+        uart.write(message)
 
-# Read uart function
-def readUART(): 
-    if uart.any(): # Is there any incoming data for uart to read?
-        readString = uart.read() # Read and store data
-        if readString and len(readString) == msgLen: # Checks if readString actally has data and if it's the proper length
-            if bytes([readString[3]]) == Baron or bytes([readString[3]]) == Bruce: # Checks if data is meant for me
-                if readString[:2] == motorDir_pref and readString[-2:] == motorDir_suf: # Is data meant for Motor Direction?
-                    motorDir_data = readString[4:6] # Stores 2 data bytes for Motor Direction, [inclusive, exclusive]
-                    return motorDir_data
-                elif readString[:2] == rotVel_pref and readString[-2:] == rotVel_suf: # Is data meant for Rotational Velocity?
-                    rotVel_data = readString[4:6] # Stores 2 data bytes for Rotational Velocity, [inclusive, exclusive]
-                    return rotVel_data
-                else:
-                    raise ValueError('Invalid Message Format')
-            else: # Data isnt meant for me
-                uart.write(readString) # Place code that will send data to next user
-        else:
-            raise ValueError('Invalid Message Length')
-    return None
-
-while True:
+while 1:
     '''#UART Write Testing
     sendUART(bytes([0x16,0x12]),'rotVel')
     time.sleep(0.1)
     print(uart.read())
     #UART Read Testing'''
-    data = motorDir_pref + motorDir_sender + Baron + bytes([0x00,0x19]) + motorDir_suf
-    uart.write(data)
-    time.sleep(0.1)
-    motorDir_data = readUART()
-    print('Data = ',motorDir_data)
-    #Data Byte Breakdown
+    sendUART(b'\x01\x02', 'rotVel')
+    #led.value(not led.value())
+    #data = b'\x01' + msgPref + rotVel_sender + rotVel_receiver + b'\x00\x19\x03\x04' + msgSuf + msgPref + rotVel_sender + rotVel_receiver + b'\x01\x18' + msgSuf
+    #uart.write(data)
+    time.sleep(.5)
+    #testmsg = readUART()
+    #print('MSG = ', uart.read())
+    #led.value(not led.value())
+    # Data Byte Breakdown
     '''print('String = ', recieveData)
     print('Length = ', len(recieveData))
     print('Prefix = ', recieveData[:2])
@@ -119,5 +130,4 @@ while True:
     print('Reciever = ', recieveData[3])
     print('Data = ', recieveData[4:6])
     print('Suffix = ', recieveData[-2:])'''
-    #time.sleep(1)
 ```
