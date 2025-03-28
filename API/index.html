@@ -502,6 +502,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#ids" class="md-nav__link">
+    IDs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#api-code" class="md-nav__link">
     API Code
   </a>
@@ -745,6 +752,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#ids" class="md-nav__link">
+    IDs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#api-code" class="md-nav__link">
     API Code
   </a>
@@ -786,36 +800,27 @@
 <thead>
 <tr>
 <th></th>
-<th>Byte 1</th>
-<th>Byte 2</th>
+<th>Byte 1-2</th>
 <th>Byte 3</th>
 <th>Byte 4</th>
-<th>Byte 5</th>
-<th>Byte 6</th>
-<th>Byte 7</th>
-<th>Byte 8</th>
+<th>Byte 5-6</th>
+<th>Byte 7-8</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Variable Name</td>
 <td>msgPref</td>
-<td>msgPref</td>
 <td>motorDir_sender</td>
 <td>motorDir_receiver</td>
 <td>motorDir_data</td>
-<td>motorDir_data</td>
-<td>msgSuf</td>
 <td>msgSuf</td>
 </tr>
 <tr>
 <td>Variable Type</td>
 <td>uint16_t</td>
-<td>uint16_t</td>
 <td>uint8_t</td>
 <td>uint8_t</td>
-<td>uint16_t</td>
-<td>uint16_t</td>
 <td>uint16_t</td>
 <td>uint16_t</td>
 </tr>
@@ -826,42 +831,30 @@
 <td>0</td>
 <td>0</td>
 <td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
 </tr>
 <tr>
 <td>Max Value</td>
 <td>65535</td>
-<td>65535</td>
 <td>255</td>
 <td>255</td>
-<td>65535</td>
-<td>65535</td>
 <td>65535</td>
 <td>65535</td>
 </tr>
 <tr>
 <td>Example Value</td>
 <td>100</td>
-<td>10001</td>
 <td>205</td>
 <td>220</td>
-<td>2886</td>
-<td>17025</td>
-<td>2040</td>
-<td>2001</td>
+<td>189</td>
+<td>254</td>
 </tr>
 <tr>
 <td>Expected Values</td>
-<td>A</td>
-<td>Z</td>
-<td>255 (0xFF)</td>
-<td>253 (0xFD)</td>
-<td>0 (0x00)<br>0 (0x00)</td>
-<td>64 (0x40)<br>65 (0x41)</td>
-<td>Y</td>
-<td>B</td>
+<td>AZ</td>
+<td>Bruce</td>
+<td>Aadish</td>
+<td>Varies</td>
+<td>YB</td>
 </tr>
 </tbody>
 </table>
@@ -873,36 +866,27 @@
 <thead>
 <tr>
 <th></th>
-<th>Byte 1</th>
-<th>Byte 2</th>
+<th>Byte 1-2</th>
 <th>Byte 3</th>
 <th>Byte 4</th>
-<th>Byte 5</th>
-<th>Byte 6</th>
-<th>Byte 7</th>
-<th>Byte 8</th>
+<th>Byte 5-6</th>
+<th>Byte 7-8</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Variable Name</td>
 <td>msgPref</td>
-<td>msgPref</td>
 <td>rotVel_sender</td>
 <td>rotVel_receiver</td>
 <td>rotVel_data</td>
-<td>rotVel_data</td>
-<td>msgSuf</td>
 <td>msgSuf</td>
 </tr>
 <tr>
 <td>Variable Type</td>
 <td>uint16_t</td>
-<td>uint16_t</td>
 <td>uint8_t</td>
 <td>uint8_t</td>
-<td>uint16_t</td>
-<td>uint16_t</td>
 <td>uint16_t</td>
 <td>uint16_t</td>
 </tr>
@@ -913,42 +897,30 @@
 <td>0</td>
 <td>0</td>
 <td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
 </tr>
 <tr>
 <td>Max Value</td>
 <td>65535</td>
-<td>65535</td>
 <td>255</td>
 <td>255</td>
-<td>65535</td>
-<td>65535</td>
 <td>65535</td>
 <td>65535</td>
 </tr>
 <tr>
 <td>Example Value</td>
 <td>625</td>
-<td>305</td>
 <td>253</td>
 <td>164</td>
-<td>53244</td>
 <td>27784</td>
-<td>7357</td>
 <td>21346</td>
 </tr>
 <tr>
 <td>Expected Values</td>
-<td>A</td>
-<td>Z</td>
-<td>252 (0xFC)</td>
-<td>255 (0xFF)</td>
+<td>AZ</td>
+<td>Shaurya</td>
+<td>Bruce</td>
 <td>Varies</td>
-<td>Varies</td>
-<td>Y</td>
-<td>B</td>
+<td>YB</td>
 </tr>
 </tbody>
 </table>
@@ -956,6 +928,34 @@
 <p>The expected value of rotational velocity is set to varies. This is because the value will be read in decimal form and converted to hexidecimal to send. This means I need to be ready to recieve a wide variety of data. The other data is treated as a digital state change (if x then do y). This data is being continuously updated.</p>
 </blockquote>
 <p>For more information about the data types and communication with the team, visit the <a href="https://egr314-2025-s-309.github.io/Block-Process-Diagrams-Message-Structure/">Team Message Page</a></p>
+<h2 id="ids">IDs</h2>
+<p>Ive inclused info about the message IDs for each user here. Check <a href="https://egr314-2025-s-309.github.io/Block-Process-Diagrams-Message-Structure/">Team Message Page</a> for more info.</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>User</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M</td>
+<td>Bruce</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Baron</td>
+</tr>
+<tr>
+<td>A</td>
+<td>Aadish</td>
+</tr>
+<tr>
+<td>S</td>
+<td>Shaurya</td>
+</tr>
+</tbody>
+</table>
 <h2 id="api-code">API Code</h2>
 <div class="highlight"><pre><span></span><code>from machine import UART, Pin
 import time
