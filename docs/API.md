@@ -28,17 +28,6 @@ Below is a breakdown of how the messages im hangling should be structured. It sh
 
 For more information about the data types and communication with the team, visit the [Team Message Page](https://egr314-2025-s-309.github.io/Block-Process-Diagrams-Message-Structure/)
 
-## IDs
-
-Ive inclused info about the message IDs for each user here. Check [Team Message Page](https://egr314-2025-s-309.github.io/Block-Process-Diagrams-Message-Structure/) for more info.
-
-| ID | User |
-|---|---|
-| M | Bruce |
-| B | Baron |
-| A | Aadish |
-| S | Shaurya |
-
 ## API Code
 ```
 from machine import UART, Pin
