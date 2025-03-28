@@ -791,10 +791,7 @@
   <h1>API</h1>
 
 <h2 id="message-types-breakdown">Message Types Breakdown</h2>
-<p>Below is a breakdown of how the messages im hangling should be structured. It shows the overall length of the message, the name of the variable each byte is stored in, the min and max values (based on the message types), an example of what value would be exceptable, and what values im expecting. Im able to recieve a wide variety of data for each byte, but im only looking for a couple of values. This is why the expected values row is very important.</p>
-<blockquote>
-<p>Example: I can recieve up to 255 for message sender, but I only need to know 4 values (one for each teamate), so while 205 fits within the acceptable range, I may not be looking for that value specifically.</p>
-</blockquote>
+<p>Below is a breakdown of how the messages im hangling should be structured. It shows the overall length of the message, the name of the variable each byte is stored in, the min and max values (based on the message types), and an example of what value would be exceptable. Im able to recieve a wide variety of data for each byte, but im only looking for a couple of values.</p>
 <h3 id="motor-direction-type-1">Motor Direction (Type 1)</h3>
 <table>
 <thead>
@@ -826,34 +823,26 @@
 </tr>
 <tr>
 <td>Min Value</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
+<td>AZ</td>
+<td>M</td>
+<td>A</td>
+<td>0x0040</td>
+<td>YB</td>
 </tr>
 <tr>
 <td>Max Value</td>
-<td>65535</td>
-<td>255</td>
-<td>255</td>
-<td>65535</td>
-<td>65535</td>
+<td>AZ</td>
+<td>M</td>
+<td>A</td>
+<td>0x0041</td>
+<td>YB</td>
 </tr>
 <tr>
 <td>Example Value</td>
-<td>100</td>
-<td>205</td>
-<td>220</td>
-<td>189</td>
-<td>254</td>
-</tr>
-<tr>
-<td>Expected Values</td>
 <td>AZ</td>
-<td>Bruce</td>
-<td>Aadish</td>
-<td>Varies</td>
+<td>M</td>
+<td>A</td>
+<td>0x0041</td>
 <td>YB</td>
 </tr>
 </tbody>
@@ -892,41 +881,30 @@
 </tr>
 <tr>
 <td>Min Value</td>
+<td>AZ</td>
+<td>S</td>
+<td>M</td>
 <td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
+<td>YB</td>
 </tr>
 <tr>
 <td>Max Value</td>
+<td>AZ</td>
+<td>S</td>
+<td>M</td>
 <td>65535</td>
-<td>255</td>
-<td>255</td>
-<td>65535</td>
-<td>65535</td>
+<td>YB</td>
 </tr>
 <tr>
 <td>Example Value</td>
-<td>625</td>
-<td>253</td>
-<td>164</td>
-<td>27784</td>
-<td>21346</td>
-</tr>
-<tr>
-<td>Expected Values</td>
 <td>AZ</td>
-<td>Shaurya</td>
-<td>Bruce</td>
-<td>Varies</td>
+<td>S</td>
+<td>M</td>
+<td>27784</td>
 <td>YB</td>
 </tr>
 </tbody>
 </table>
-<blockquote>
-<p>The expected value of rotational velocity is set to varies. This is because the value will be read in decimal form and converted to hexidecimal to send. This means I need to be ready to recieve a wide variety of data. The other data is treated as a digital state change (if x then do y). This data is being continuously updated.</p>
-</blockquote>
 <p>For more information about the data types and communication with the team, visit the <a href="https://egr314-2025-s-309.github.io/Block-Process-Diagrams-Message-Structure/">Team Message Page</a></p>
 <h2 id="ids">IDs</h2>
 <p>Ive inclused info about the message IDs for each user here. Check <a href="https://egr314-2025-s-309.github.io/Block-Process-Diagrams-Message-Structure/">Team Message Page</a> for more info.</p>
