@@ -16,8 +16,6 @@ Below is a breakdown of how the messages im hangling should be structured. It sh
 | Max Value | AZ | M | A | 0x0041 | YB |
 | Example Value | AZ | M | A | 0x0041 | YB |
 
-> Some variables are stored in the same variable but across multiple bytes. Any 2 bytes that share a variable name will store the expected values togeather. Example: motorDir_pref has 2 bytes. Byte 1 = 0x00, Byte 2 = 0x01. The actual stored value will look like this: 0x0001. This takes two 8 bit segments and strings them togeather.
-
 ### Rotational Velocity (Type 3)
 
 |  | Byte 1-2 | Byte 3 | Byte 4 | Byte 5-6 | Byte 7-8 |
