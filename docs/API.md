@@ -9,31 +9,42 @@ Below is a breakdown of how the messages im hangling should be structured. It sh
 
 ### Motor Direction (Type 1)
 
-|  | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 | Byte 7 | Byte 8 |
-|---|---|---|---|---|---|---|---|---|
-| Variable Name | msgPref | msgPref | motorDir_sender | motorDir_receiver | motorDir_data | motorDir_data | msgSuf | msgSuf |
-| Variable Type | uint16_t | uint16_t | uint8_t | uint8_t | uint16_t | uint16_t | uint16_t | uint16_t |
-| Min Value | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Max Value | 65535 | 65535 | 255 | 255 | 65535 | 65535 | 65535 | 65535 |
-| Example Value | 100 | 10001 | 205 | 220 | 2886 | 17025 | 2040 | 2001 |
-| Expected Values | A | Z | 255 (0xFF) | 253 (0xFD) | 0 (0x00)<br>0 (0x00) | 64 (0x40)<br>65 (0x41) | Y | B |
+|  | Byte 1-2 | Byte 3 | Byte 4 | Byte 5-6 | Byte 7-8 |
+|---|---|---|---|---|---|
+| Variable Name | msgPref | motorDir_sender | motorDir_receiver | motorDir_data | msgSuf |
+| Variable Type | uint16_t | uint8_t | uint8_t | uint16_t | uint16_t |
+| Min Value | 0 | 0 | 0 | 0 | 0 |
+| Max Value | 65535 | 255 | 255 | 65535 | 65535 |
+| Example Value | 100 | 205 | 220 | 189 | 254 |
+| Expected Values | AZ | Bruce | Aadish | Varies | YB |
 
 > Some variables are stored in the same variable but across multiple bytes. Any 2 bytes that share a variable name will store the expected values togeather. Example: motorDir_pref has 2 bytes. Byte 1 = 0x00, Byte 2 = 0x01. The actual stored value will look like this: 0x0001. This takes two 8 bit segments and strings them togeather.
 
 ### Rotational Velocity (Type 3)
 
-|  | Byte 1 | Byte 2 | Byte 3 | Byte 4 | Byte 5 | Byte 6 | Byte 7 | Byte 8 |
-|---|---|---|---|---|---|---|---|---|
-| Variable Name | msgPref | msgPref | rotVel_sender | rotVel_receiver | rotVel_data | rotVel_data | msgSuf | msgSuf |
-| Variable Type | uint16_t | uint16_t | uint8_t | uint8_t | uint16_t | uint16_t | uint16_t | uint16_t |
-| Min Value | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Max Value | 65535 | 65535 | 255 | 255 | 65535 | 65535 | 65535 | 65535 |
-| Example Value | 625 | 305 | 253 | 164 | 53244 | 27784 | 7357 | 21346 |
-| Expected Values | A | Z | 252 (0xFC) | 255 (0xFF) | Varies | Varies | Y | B |
+|  | Byte 1-2 | Byte 3 | Byte 4 | Byte 5-6 | Byte 7-8 |
+|---|---|---|---|---|---|
+| Variable Name | msgPref | rotVel_sender | rotVel_receiver | rotVel_data | msgSuf |
+| Variable Type | uint16_t | uint8_t | uint8_t | uint16_t | uint16_t |
+| Min Value | 0 | 0 | 0 | 0 | 0 |
+| Max Value | 65535 | 255 | 255 | 65535 | 65535 |
+| Example Value | 625 | 253 | 164 | 27784 | 21346 |
+| Expected Values | AZ | Shaurya | Bruce | Varies | YB |
 
 > The expected value of rotational velocity is set to varies. This is because the value will be read in decimal form and converted to hexidecimal to send. This means I need to be ready to recieve a wide variety of data. The other data is treated as a digital state change (if x then do y). This data is being continuously updated.
 
 For more information about the data types and communication with the team, visit the [Team Message Page](https://egr314-2025-s-309.github.io/Block-Process-Diagrams-Message-Structure/)
+
+## IDs
+
+Ive inclused info about the message IDs for each user here. Check [Team Message Page](https://egr314-2025-s-309.github.io/Block-Process-Diagrams-Message-Structure/) for more info.
+
+| ID | User |
+|---|---|
+| M | Bruce |
+| B | Baron |
+| A | Aadish |
+| S | Shaurya |
 
 ## API Code
 ```
