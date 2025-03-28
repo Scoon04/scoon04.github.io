@@ -4,8 +4,7 @@ title: API
 
 ## Message Types Breakdown
 
-Below is a breakdown of how the messages im hangling should be structured. It shows the overall length of the message, the name of the variable each byte is stored in, the min and max values (based on the message types), an example of what value would be exceptable, and what values im expecting. Im able to recieve a wide variety of data for each byte, but im only looking for a couple of values. This is why the expected values row is very important.
-> Example: I can recieve up to 255 for message sender, but I only need to know 4 values (one for each teamate), so while 205 fits within the acceptable range, I may not be looking for that value specifically.
+Below is a breakdown of how the messages im hangling should be structured. It shows the overall length of the message, the name of the variable each byte is stored in, the min and max values (based on the message types), and an example of what value would be exceptable. Im able to recieve a wide variety of data for each byte, but im only looking for a couple of values.
 
 ### Motor Direction (Type 1)
 
@@ -13,10 +12,9 @@ Below is a breakdown of how the messages im hangling should be structured. It sh
 |---|---|---|---|---|---|
 | Variable Name | msgPref | motorDir_sender | motorDir_receiver | motorDir_data | msgSuf |
 | Variable Type | uint16_t | uint8_t | uint8_t | uint16_t | uint16_t |
-| Min Value | 0 | 0 | 0 | 0 | 0 |
-| Max Value | 65535 | 255 | 255 | 65535 | 65535 |
-| Example Value | 100 | 205 | 220 | 189 | 254 |
-| Expected Values | AZ | Bruce | Aadish | Varies | YB |
+| Min Value | AZ | M | A | 0x0040 | YB |
+| Max Value | AZ | M | A | 0x0041 | YB |
+| Example Value | AZ | M | A | 0x0041 | YB |
 
 > Some variables are stored in the same variable but across multiple bytes. Any 2 bytes that share a variable name will store the expected values togeather. Example: motorDir_pref has 2 bytes. Byte 1 = 0x00, Byte 2 = 0x01. The actual stored value will look like this: 0x0001. This takes two 8 bit segments and strings them togeather.
 
@@ -26,12 +24,9 @@ Below is a breakdown of how the messages im hangling should be structured. It sh
 |---|---|---|---|---|---|
 | Variable Name | msgPref | rotVel_sender | rotVel_receiver | rotVel_data | msgSuf |
 | Variable Type | uint16_t | uint8_t | uint8_t | uint16_t | uint16_t |
-| Min Value | 0 | 0 | 0 | 0 | 0 |
-| Max Value | 65535 | 255 | 255 | 65535 | 65535 |
-| Example Value | 625 | 253 | 164 | 27784 | 21346 |
-| Expected Values | AZ | Shaurya | Bruce | Varies | YB |
-
-> The expected value of rotational velocity is set to varies. This is because the value will be read in decimal form and converted to hexidecimal to send. This means I need to be ready to recieve a wide variety of data. The other data is treated as a digital state change (if x then do y). This data is being continuously updated.
+| Min Value | AZ | S | M | 0 | YB |
+| Max Value | AZ | S | M | 65535 | YB |
+| Example Value | AZ | S | M | 27784 | YB |
 
 For more information about the data types and communication with the team, visit the [Team Message Page](https://egr314-2025-s-309.github.io/Block-Process-Diagrams-Message-Structure/)
 
