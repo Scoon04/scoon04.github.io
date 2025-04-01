@@ -29,10 +29,10 @@ Below is a breakdown of how the messages im hangling should be structured. It sh
 ### IDs
 | ID | User |
 |---|---|
-| 0xFF | Bruce |
-| 0xFE | Baron |
-| 0xFD | Aadish |
-| 0xFC | Shaurya |
+| M | Bruce |
+| B | Baron |
+| A | Aadish |
+| S | Shaurya |
 
 For more information about the data types and communication with the team, visit the [Team Message Page](https://egr314-2025-s-309.github.io/Block-Process-Diagrams-Message-Structure/)
 
