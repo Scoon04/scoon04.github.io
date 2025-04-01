@@ -496,6 +496,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#ids" class="md-nav__link">
+    IDs
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -739,6 +746,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#ids" class="md-nav__link">
+    IDs
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -888,6 +902,33 @@
 </tr>
 </tbody>
 </table>
+<h3 id="ids">IDs</h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>User</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0xFF</td>
+<td>Bruce</td>
+</tr>
+<tr>
+<td>0xFE</td>
+<td>Baron</td>
+</tr>
+<tr>
+<td>0xFD</td>
+<td>Aadish</td>
+</tr>
+<tr>
+<td>0xFC</td>
+<td>Shaurya</td>
+</tr>
+</tbody>
+</table>
 <p>For more information about the data types and communication with the team, visit the <a href="https://egr314-2025-s-309.github.io/Block-Process-Diagrams-Message-Structure/">Team Message Page</a></p>
 <h2 id="api-code">API Code</h2>
 <div class="highlight"><pre><span></span><code>from machine import UART, Pin
@@ -895,94 +936,132 @@ import time
 import uasyncio as asyncio
 
 # UART Setup
-#uart = UART(0, 9600, tx = 43, rx = 44) #  My board
-uart = UART(2, 9600, tx = 17, rx = 16) # Dev board
-uart.init(9600, bits = 8, parity = None, stop = 1)
-#led = Pin(16, Pin.OUT)
+uart = UART(2, 9600, tx=17, rx=16)
+uart.init(9600, bits=8, parity=None, stop=1)
+# LED Setup
+led = Pin(2, Pin.OUT)
 
-# Max Message length (bytes)
-maxMsgLen = 64
-
-# Set ID&#39;s
-Bruce = b&#39;\xFF&#39;
-Baron = b&#39;\xFE&#39;
-Aadish = b&#39;\xFD&#39;
-Shaurya = b&#39;\xFC&#39;
-Broadcast = b&#39;X&#39;
-
-# Prefix and Suffix
+# Constants
+maxMsgLen = 8
 msgPref = b&#39;AZ&#39;
 msgSuf = b&#39;YB&#39;
+team = [b&#39;B&#39;, b&#39;M&#39;, b&#39;A&#39;, b&#39;S&#39;, b&#39;X&#39;]  # Defines ID for each team member + broadcast(X)
+# Assign individual IDs
+id = team[0]        # B (This device)
+bruce = team[1]     # M
+aadish = team[2]    # A
+shaw = team[3]      # S
+broadcast = team[4] # X
+receivedData = None
 
-# Define bytes in data
-# Motor Direction
-motorDir_sender = Bruce
-motorDir_receiver = Aadish
-# Rotational Velocity
-rotVel_sender = Shaurya
-rotVel_receiver = Bruce
+# Message Types
+msgTypes = {
+    aadish: [0x0040, 0x0041],  # Motor Direction: Only allows 0x0040 or 0x0041
+    bruce: &#39;uint16&#39;            # Rotational Velocity: Any value (0x0000 - 0xFFFF)
+}
 
-msg = b&#39;&#39;
-
-def readUART():
-    msg = b&#39;&#39;
-    found_prefix = False
-    while True:
-        if uart.any():  # Check if there is data available
-            byte = uart.read(1)  # Read one byte at a time
-            if not found_prefix:
-                if byte == msgPref[:1]:  # First byte matches first part of prefix
-                    msg = byte  # Reset and start storing
-                    next_byte = uart.read(1)  # Read the next byte
-                    if next_byte == msgPref[1:]:  # Second byte matches
-                        msg += next_byte
-                        found_prefix = True
-                continue  # Ignore any other byte before prefix
-            else:
-                msg += byte
-                if msg.endswith(msgSuf):
-                    break  # Suffix found, stop reading
-    # Ensure valid message format and store sender and receiver
-    if len(msg) &lt;= maxMsgLen and msg[:2] == msgPref and msg[-2:] == msgSuf:
-        sender = msg[2:3]
-        receiver = msg[3:4]
-        if receiver in [Baron, Bruce, Broadcast]:  # Check if message is for me
-            return msg  # Return the entire message
-        else:
-            uart.write(msg)  # Forward message if not intended for me
-    return None
-
-# Send uart function
 def sendUART(data, type):
     if type == &#39;motorDir&#39;:
-        message = msgPref + motorDir_sender + motorDir_receiver + data + msgSuf
-        uart.write(message)
+        if data in msgTypes[aadish]:  # Only allow predefined values
+            msg = msgPref + bruce + aadish + data.to_bytes(2, &#39;big&#39;) + msgSuf
+            uart.write(msg)
+            print(f&#39;Sent: {msg}&#39;)
+            return
+        else:
+            print(f&#39;Send Error: Invalid motorDir data: {data}&#39;)
     elif type == &#39;rotVel&#39;:
-        message = msgPref + rotVel_sender + rotVel_receiver + data + msgSuf
-        uart.write(message)
+        msg = msgPref + shaw + bruce + data.to_bytes(2, &#39;big&#39;) + msgSuf
+        uart.write(msg)
+        print(f&#39;Sent: {msg}&#39;)
+        return
+    else:
+        print(&#39;Send Error: Invalid type&#39;)
 
-while 1:
-    &#39;&#39;&#39;#UART Write Testing
-    sendUART(bytes([0x16,0x12]),&#39;rotVel&#39;)
-    time.sleep(0.1)
-    print(uart.read())
-    #UART Read Testing&#39;&#39;&#39;
-    sendUART(b&#39;\x01\x02&#39;, &#39;rotVel&#39;)
-    #led.value(not led.value())
-    #data = b&#39;\x01&#39; + msgPref + rotVel_sender + rotVel_receiver + b&#39;\x00\x19\x03\x04&#39; + msgSuf + msgPref + rotVel_sender + rotVel_receiver + b&#39;\x01\x18&#39; + msgSuf
-    #uart.write(data)
-    time.sleep(.5)
-    #testmsg = readUART()
-    #print(&#39;MSG = &#39;, uart.read())
-    #led.value(not led.value())
-    # Data Byte Breakdown
-    &#39;&#39;&#39;print(&#39;String = &#39;, recieveData)
-    print(&#39;Length = &#39;, len(recieveData))
-    print(&#39;Prefix = &#39;, recieveData[:2])
-    print(&#39;Sender = &#39;, recieveData[2])
-    print(&#39;Reciever = &#39;, recieveData[3])
-    print(&#39;Data = &#39;, recieveData[4:6])
-    print(&#39;Suffix = &#39;, recieveData[-2:])&#39;&#39;&#39;
+def handle_message(msg):
+    global receivedData
+    try:
+        if len(msg) &lt; 8 or len(msg) &gt; maxMsgLen:
+            print(&#39;Error: Invalid msg length&#39;)
+            return
+        # Extract parts of the message
+        prefix = msg[:2]
+        sender = msg[2:3]
+        receiver = msg[3:4]
+        data = int.from_bytes(msg[4:6], &#39;big&#39;)
+        suffix = msg[-2:]
+        # Validate format
+        if prefix != msgPref or suffix != msgSuf:
+            print(&#39;Error: Invalid message format&#39;)
+            return
+        # Validate sender
+        if sender not in team:
+            print(&#39;Error: Invalid sender&#39;)
+            return
+        if sender == id:
+            print(&#39;Error: Ignoring message sent by me&#39;)
+            return
+        # Validate receiver
+        if receiver not in team:
+            print(&#39;Error: Invalid receiver&#39;)
+            return
+        if receiver not in [id, bruce, aadish, broadcast]:
+            print(&#39;MSG not for me&#39;)
+            uart.write(msg)
+            return
+        # Validate message type and data
+        if receiver in msgTypes:
+            if msgTypes[receiver] == &#39;uint16&#39; or data in msgTypes[receiver]:
+                receivedData = data
+                return
+            else:
+                print(f&#39;Error: Invalid data {data} for type {receiver}&#39;)
+                return
+        if receiver == broadcast:
+            receivedData = data
+            return
+        print(&#39;Error: Unknown message type&#39;)
+    except Exception as e:
+        pass
+
+async def readUART():
+    stream = b&#39;&#39;
+    receiving_message = False
+    while True:
+        c = uart.read(1)  # Read one byte
+        if c:
+            stream += c  # Append byte to stream
+            if stream.endswith(msgPref):  # MSG prefix detected
+                receiving_message = True
+                stream = msgPref  # Reset and keep prefix
+            if receiving_message and stream.endswith(msgSuf):  # MSG suffix detected
+                receiving_message = False
+                print(f&#39;ESP: Received {stream}&#39;)
+                handle_message(stream)
+                stream = b&#39;&#39;  # Reset for next message
+            if len(stream) &gt; maxMsgLen:  # Discard oversized messages
+                print(&#39;Error: Message too long&#39;)
+                stream = b&#39;&#39;
+                receiving_message = False
+        await asyncio.sleep_ms(10)  # Small delay for async handling
+
+async def heartbeat():
+    while True:
+        #uart.write(b&#39;\x00AZMA\x00\x40YB&#39;)
+        sendUART(64, &#39;motorDir&#39;)
+        await asyncio.sleep(5)
+
+async def main():
+    while True:
+        print(f&#39;Data = {receivedData}&#39;)
+        await asyncio.sleep(1)
+
+asyncio.create_task(readUART())
+asyncio.create_task(heartbeat())
+
+try:
+    asyncio.run(main())
+finally:
+    asyncio.new_event_loop()
 </code></pre></div>
 
 
