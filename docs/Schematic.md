@@ -6,6 +6,8 @@ title: Schematic
 
 ![Individual System Design-1](https://github.com/user-attachments/assets/a326246e-0c13-4606-b9d4-72939ec2924e)
 
+> Note: The RXD0 and TXD0 pins are the uart0 module. They were causing issues so I switched to using the uart2 module with RX on IO45 and TX on IO48. I didnt update the schematic becuase this represents how my board was designed. The uart modifications were made with external wires.
+
 [Individual System Design.pdf](https://github.com/user-attachments/files/19599037/Individual.System.Design.pdf)
 
 [Individual System Design (4-3-2025 11-19-09 PM).zip](https://github.com/user-attachments/files/19599112/Individual.System.Design.4-3-2025.11-19-09.PM.zip)
