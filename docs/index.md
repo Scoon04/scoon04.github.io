@@ -13,7 +13,7 @@ For ASU's Spring 2025 semester of the class EGR 314, my responsibility for my te
 
 | **Name** | **Team #** | **Semester** | **Class #** | **Professor** |
 | --- | --- | --- | --- | --- |
-| Baron Guido | 309 | Spring 2025 | EGR 314 | Kevin Nichols |
+| Baron Guido | 309B | Spring 2025 | EGR 314 | Kevin Nichols |
 
 ## Links to Pages
 
