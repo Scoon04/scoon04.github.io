@@ -60,7 +60,7 @@ Any minor components I select must be no smaller than 1206 size, this is for an 
 
 ![Image](https://github.com/user-attachments/assets/4b835f19-0ff4-4484-bf0b-f7c4d0bc6703)
 
-My ESP32 pins will only use the RX and TX pins for the uart data stream and the D+ and D- for programming with a micro usb port. This will communicate wirelessly through a MQTT server to the HMI to share and collect more data, similar purpose to the uart stream but wireless. It will also communicate with a online user to do similar things that the in person user can do. See the [Process Diagram](https://egr314-2025-s-309.github.io/Block-Process-Diagrams-Message-Structure/) on the team website for more info on this.
+My ESP32 pins will only use the RX and TX pins for the uart data stream and the D+ and D- for programming with a micro usb port. This will communicate wirelessly through a MQTT server to the HMI to share and collect more data, similar purpose to the uart stream but wireless. It will also communicate with a online user to do similar things that the in person user can do. See the [Process Diagram](https://egr314-2025-s-309b.github.io/Block-Process-Diagrams-Message-Structure/) on the team website for more info on this.
 
 ## Power Budget
 
