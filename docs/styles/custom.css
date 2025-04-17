@@ -1,3 +1,10 @@
-body {
-  border: 5px solid red;
+/* Custom blockquote styling */
+blockquote {
+  background-color: rgba(0, 255, 0, 0.05); /* Soft lime background */
+  border-left: 4px solid #32CD32; /* Lime accent line */
+  padding: 1em;
+  margin: 1em 0;
+  color: #cccccc; /* Light gray text */
+  font-style: normal;
+  border-radius: 6px;
 }
