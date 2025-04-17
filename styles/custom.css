@@ -1,0 +1,15 @@
+/* Better dark mode blockquote styling */
+html[data-theme='dark'] blockquote {
+  background-color: #1e1e1e;
+  color: #e6e6e6;
+  border-left: 4px solid #4fa3ff;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 5px;
+}
+
+html[data-theme='light'] blockquote {
+  background-color: #f9f9f9;
+  color: #222;
+  border-left: 4px solid #007acc;
+}
