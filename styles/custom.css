@@ -1,10 +1,10 @@
-/* Custom blockquote styling */
-blockquote {
-  background-color: rgba(0, 255, 0, 0.05); /* Soft lime background */
-  border-left: 4px solid #32CD32; /* Lime accent line */
+/* Custom blockquote styling for dark mode */
+.md-typeset blockquote {
+  background-color: rgba(255, 255, 0, 0.1); /* Soft yellow background */
+  border-left: 2px solid #FFD700; /* Golden yellow accent line */
   padding: 1em;
   margin: 1em 0;
-  color: #cccccc; /* Light gray text */
+  color: #D3D3D3; /* Light grey text */
   font-style: normal;
   border-radius: 6px;
 }
