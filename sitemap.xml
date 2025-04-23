@@ -2,62 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://embedded-systems-design.github.io/template_report/</loc>
-         <lastmod>2025-04-17</lastmod>
+         <lastmod>2025-04-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://embedded-systems-design.github.io/template_report/API/</loc>
-         <lastmod>2025-04-17</lastmod>
+         <lastmod>2025-04-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://embedded-systems-design.github.io/template_report/Bill-of-Materials/</loc>
-         <lastmod>2025-04-17</lastmod>
+         <lastmod>2025-04-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://embedded-systems-design.github.io/template_report/Block-Diagram/</loc>
-         <lastmod>2025-04-17</lastmod>
+         <lastmod>2025-04-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://embedded-systems-design.github.io/template_report/Component-Selection/</loc>
-         <lastmod>2025-04-17</lastmod>
+         <lastmod>2025-04-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://embedded-systems-design.github.io/template_report/PCB/</loc>
-         <lastmod>2025-04-17</lastmod>
+         <lastmod>2025-04-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://embedded-systems-design.github.io/template_report/Schematic/</loc>
-         <lastmod>2025-04-17</lastmod>
+         <lastmod>2025-04-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://embedded-systems-design.github.io/template_report/Appendix/Old-Block-Diagram/</loc>
-         <lastmod>2025-04-17</lastmod>
+         <lastmod>2025-04-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://embedded-systems-design.github.io/template_report/Appendix/Old-Component-Selection/</loc>
-         <lastmod>2025-04-17</lastmod>
+         <lastmod>2025-04-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://embedded-systems-design.github.io/template_report/Resources/Minor-Components/</loc>
-         <lastmod>2025-04-17</lastmod>
+         <lastmod>2025-04-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://embedded-systems-design.github.io/template_report/Resources/charts/</loc>
-         <lastmod>2025-04-17</lastmod>
+         <lastmod>2025-04-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://embedded-systems-design.github.io/template_report/static/node_modules/mathjax/</loc>
-         <lastmod>2025-04-17</lastmod>
+         <lastmod>2025-04-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
