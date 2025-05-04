@@ -50,15 +50,28 @@ Selected Part
 
 This part has a larger mah size so it will last a bit longer than the other options without having to recharging. It's also a great price for a 2 pack, and has a quick delivery time unlike one of the other options. It overall is slightly better than the other options because of its price, mah size, and delivery time.
 
-## Minor Components
+### Minor Components
 
 Any minor components I select must be no smaller than 1206 size, this is for an easier time soldering components. Some other minor components I need are pushbuttons for programming the ESP32, Fuses, and some debug items. These items aren't major so I havent done a component selection for them, but I do have a list of minor components on the Minor Components Page (located under the Resources Page) that I am constantly updating. You can also find a larger more detailed list of items on the [BOM Page](Bill-of-Materials.md).
+
+## Final Major Component List
+
+| **Component** | **Image** | **Link** |
+|---------------|----------|----------|
+| ESP32-S3-WROOM-1-N4 | ![Image](https://github.com/user-attachments/assets/466d1162-997f-4f1b-a346-3a31fbbc5549) | [Product Page](https://www.digikey.com/en/products/detail/espressif-systems/ESP32-S3-WROOM-1-N4/16162639) |
+| LM2575D2T-3.3R4G | ![image](https://github.com/user-attachments/assets/fea271f6-0a50-459a-a540-97bd2227866c) | [Product Page](https://www.digikey.com/en/products/detail/onsemi/LM2575D2T-3-3R4G/1476688) |
+| LCLEBM 9V 1300mah | ![Image](https://github.com/user-attachments/assets/3389944e-e1bd-4a68-a7e6-118b94958817) | [Product Page](https://www.amazon.com/PAISUE-Rechargeable-Lithium-ion-Multimeter-Microphone/dp/B0B248DSFG?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&smid=A2WEVNKRB72JGE&gQT=1) |
+| 9100 RPM Motor | ![image](https://github.com/user-attachments/assets/150b535b-7145-48b7-9938-523e9ada5008) | [Product Page](https://www.digikey.com/en/products/detail/adafruit-industries-llc/711/5353610?gQT=1) |
+
+### Final Component Decision Making Process
+
+The microcontroller and battery are the same parts ive had for the entire project. They provide the functionallity and battery life I need. The voltage regulator was switched do to issues with my previous one overheating. The motor was an addon made last minute for a more presentable project for the showcase. More descriptions about the project on the [Team Website](https://egr314-2025-s-309b.github.io/)
 
 ## ESP32 Pinout Diagram
 
 >***Check [Schematic Page](Schematic.md) for most updated information in case this diagram hasent been updated***
 
-![Image](https://github.com/user-attachments/assets/4b835f19-0ff4-4484-bf0b-f7c4d0bc6703)
+![image](https://github.com/user-attachments/assets/ccfeed44-4e6a-496f-b7b8-8672e5cccd58)
 
 My ESP32 pins will only use the RX and TX pins for the uart data stream and the D+ and D- for programming with a micro usb port. This will communicate wirelessly through a MQTT server to the HMI to share and collect more data, similar purpose to the uart stream but wireless. It will also communicate with a online user to do similar things that the in person user can do. See the [Process Diagram](https://egr314-2025-s-309b.github.io/Block-Process-Diagrams-Message-Structure/) on the team website for more info on this.
 
@@ -70,11 +83,15 @@ The power budget on my board only needs to power the microcontroller. However, a
 |---|---|---|---|---|---|
 |  | ESP32 Controller | ESP32-S3-WROOM-1-N4 | 3.3 - 3.6 | 1 | 355 |
 | **9V Power Rail** | **Component Name** | **Part Number** | **Supply Voltage Range** | **#** | **Max Current (mA)** |
-|  | N/A | N/A | N/A | N/A | N/A |
+|  | Motor | 711 | 9 | 1 | 100 |
 | **3.3V Power Rail** | **Component Name** | **Part Number** | **Supply Voltage Range** | **#** | **Max Current (mA)** |
 |  | ESP32 Controller | ESP32-S3-WROOM-1-N4 | 3.3 - 3.6 | 1 | 355 |
 | **External Power Source** | **Component Name** | **Part Number** | **Supply Voltage Range** | **#** | **Current Supplied (mAh)** |
 |  | Battery | B0B248DSFG | 9V | 1 | 1300 |
 | **Battery Life** | **Parts Required Current** | **Battery Current (mAh)** | **Lowest Runtime (hh:mm)** |  |  |
 |  | 355 | 1300 | 03:39 |  |  |
-| **25% Safety Margin** | 443 | 1300 | 02:56 |  |  |
+| **25% Safety Margin** | 756.25 | 1300 | 01:43 |  |  |
+
+### Power Budget Explenation
+
+This power budget allowed us to decide what battery to use. Considering our project is wireless, the battery life matters. This power budget showed us that a 1300 mAh battery (while not having the best battery life) would be enough for my system. And considering my teamates system will have its own power supply, this will be sufficient. The motor has a max stall current of 250mA, but this isnt practical as the motor wont be stalling all the time and it wont be running all the time so the battery life will be much better than shown.
