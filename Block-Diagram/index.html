@@ -98,6 +98,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#general-info" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -489,6 +494,17 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Block Diagram
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -498,6 +514,37 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#general-info" class="md-nav__link">
+    General Info
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decision-making-process" class="md-nav__link">
+    Decision making Process
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -660,6 +707,28 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#general-info" class="md-nav__link">
+    General Info
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decision-making-process" class="md-nav__link">
+    Decision making Process
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -684,8 +753,10 @@
   <h1>Block Diagram</h1>
 
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/3fb776ed-d963-4da6-bceb-58b18d3f9e56" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/3fb776ed-d963-4da6-bceb-58b18d3f9e56" /></a></p>
-<p>My block diagram shows the components and their communication with the microcontroller. Because my section is the MQTT server, there arent many electrical components to show. There are some general buttons for programing and debuging, as well as a block for the micro usb port for programing. The uart pins are shown for showing how I will be sending and recieving data from my teamates boards.</p>
-<p>I added a 9V motor controlled by a transistor for the final showcase of the project. This was to give us something more presentable and exciting for our audience.</p>
+<h2 id="general-info">General Info</h2>
+<p>My block diagram shows the components and their communication with the microcontroller. Because my section is the MQTT server, there arent many electrical components to show. There are some general buttons for programing and debuging, as well as a block for the micro usb port for programing. The uart pins are shown for showing how I will be sending and recieving data from my teamates boards. I added a 9V motor controlled by a transistor for the final showcase of the project. This was to give us something more presentable and exciting for our audience.</p>
+<h2 id="decision-making-process">Decision making Process</h2>
+<p>Given my responsibility for our teams project was managing the MQTT server, and our only microcontroller options were PIC18F and esp32-s3, then the choice has to be esp32-s3 as it had the wifi capabilities out of the box where thei PIC doesnt. The buttons and led were for debug and programming purposes. The transistor controlled motor was a last minute addon that was made after my team split into 2. We no longer had the motor driver system so the simplest solution was a transistor to controll a motor. This also fit the basic functionality of the spinning top.</p>
 
 
 
