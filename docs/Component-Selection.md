@@ -92,6 +92,6 @@ The power budget on my board only needs to power the microcontroller. However, a
 |  | 355 | 1300 | 03:39 |  |  |
 | **25% Safety Margin** | 756.25 | 1300 | 01:43 |  |  |
 
-### Power Budget Explenation
+### Power Budget Explanation
 
 This power budget allowed us to decide what battery to use. Considering our project is wireless, the battery life matters. This power budget showed us that a 1300 mAh battery (while not having the best battery life) would be enough for my system. And considering my teamates system will have its own power supply, this will be sufficient. The motor has a max stall current of 250mA, but this isnt practical as the motor wont be stalling all the time and it wont be running all the time so the battery life will be much better than shown.
